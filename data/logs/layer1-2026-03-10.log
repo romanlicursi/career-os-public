@@ -1,0 +1,165 @@
+[36m[apify.linkedin-jobs-scraper-api runId:cjMczGFMWPT7WaQgq][0m -> Status: RUNNING, Message: 
+[36m[apify.linkedin-jobs-scraper-api runId:cjMczGFMWPT7WaQgq][0m -> 2026-03-10T10:32:22.542Z ACTOR: Pulling container image of build zheBhwsHVM4FOtWIZ from registry.
+[36m[apify.linkedin-jobs-scraper-api runId:cjMczGFMWPT7WaQgq][0m -> 2026-03-10T10:32:23.076Z ACTOR: Creating container.
+[36m[apify.linkedin-jobs-scraper-api runId:cjMczGFMWPT7WaQgq][0m -> 2026-03-10T10:32:23.206Z ACTOR: Starting container.
+[36m[apify.linkedin-jobs-scraper-api runId:cjMczGFMWPT7WaQgq][0m -> 2026-03-10T10:32:23.208Z ACTOR: Running under "LIMITED_PERMISSIONS" permission level.
+[36m[apify.linkedin-jobs-scraper-api runId:cjMczGFMWPT7WaQgq][0m -> 2026-03-10T10:32:24.428Z [32mINFO[39m  System info[90m {"apifyVersion":"3.5.3","apifyClientVersion":"2.21.0","crawleeVersion":"3.15.3","osType":"Linux","nodeVersion":"v20.19.6"}[39m
+[36m[apify.linkedin-jobs-scraper-api runId:cjMczGFMWPT7WaQgq][0m -> 2026-03-10T10:32:24.524Z Input: {
+[36m[apify.linkedin-jobs-scraper-api runId:cjMczGFMWPT7WaQgq][0m -> 2026-03-10T10:32:24.526Z   keywords: [32m'Revenue Operations Analyst'[39m,
+[36m[apify.linkedin-jobs-scraper-api runId:cjMczGFMWPT7WaQgq][0m -> 2026-03-10T10:32:24.528Z   location: [32m'United States'[39m,
+[36m[apify.linkedin-jobs-scraper-api runId:cjMczGFMWPT7WaQgq][0m -> 2026-03-10T10:32:24.530Z   limit: [33m10[39m,
+[36m[apify.linkedin-jobs-scraper-api runId:cjMczGFMWPT7WaQgq][0m -> 2026-03-10T10:32:24.531Z   page_number: [33m1[39m
+[36m[apify.linkedin-jobs-scraper-api runId:cjMczGFMWPT7WaQgq][0m -> 2026-03-10T10:32:24.533Z }
+[36m[apify.linkedin-jobs-scraper-api runId:cjMczGFMWPT7WaQgq][0m -> 2026-03-10T10:32:32.926Z Successfully processed 10 jobs
+[36m[apify.linkedin-jobs-scraper-api runId:cjMczGFMWPT7WaQgq][0m -> Status: SUCCEEDED, Message: 
+[36m[apify.linkedin-jobs-scraper-api runId:z1H6Lj4VfGrfpzjgt][0m -> Status: RUNNING, Message: 
+[36m[apify.linkedin-jobs-scraper-api runId:z1H6Lj4VfGrfpzjgt][0m -> 2026-03-10T10:32:40.782Z ACTOR: Pulling container image of build zheBhwsHVM4FOtWIZ from registry.
+[36m[apify.linkedin-jobs-scraper-api runId:z1H6Lj4VfGrfpzjgt][0m -> 2026-03-10T10:32:40.784Z ACTOR: Creating container.
+[36m[apify.linkedin-jobs-scraper-api runId:z1H6Lj4VfGrfpzjgt][0m -> 2026-03-10T10:32:40.857Z ACTOR: Starting container.
+[36m[apify.linkedin-jobs-scraper-api runId:z1H6Lj4VfGrfpzjgt][0m -> 2026-03-10T10:32:40.859Z ACTOR: Running under "LIMITED_PERMISSIONS" permission level.
+[36m[apify.linkedin-jobs-scraper-api runId:z1H6Lj4VfGrfpzjgt][0m -> 2026-03-10T10:32:41.737Z [32mINFO[39m  System info[90m {"apifyVersion":"3.5.3","apifyClientVersion":"2.21.0","crawleeVersion":"3.15.3","osType":"Linux","nodeVersion":"v20.19.6"}[39m
+[36m[apify.linkedin-jobs-scraper-api runId:z1H6Lj4VfGrfpzjgt][0m -> 2026-03-10T10:32:41.882Z Input: {
+[36m[apify.linkedin-jobs-scraper-api runId:z1H6Lj4VfGrfpzjgt][0m -> 2026-03-10T10:32:41.884Z   keywords: [32m'GTM Operations'[39m,
+[36m[apify.linkedin-jobs-scraper-api runId:z1H6Lj4VfGrfpzjgt][0m -> 2026-03-10T10:32:41.885Z   location: [32m'United States'[39m,
+[36m[apify.linkedin-jobs-scraper-api runId:z1H6Lj4VfGrfpzjgt][0m -> 2026-03-10T10:32:41.887Z   limit: [33m10[39m,
+[36m[apify.linkedin-jobs-scraper-api runId:z1H6Lj4VfGrfpzjgt][0m -> 2026-03-10T10:32:41.888Z   page_number: [33m1[39m
+[36m[apify.linkedin-jobs-scraper-api runId:z1H6Lj4VfGrfpzjgt][0m -> 2026-03-10T10:32:41.890Z }
+[36m[apify.linkedin-jobs-scraper-api runId:z1H6Lj4VfGrfpzjgt][0m -> 2026-03-10T10:32:46.453Z Successfully processed 10 jobs
+[36m[apify.linkedin-jobs-scraper-api runId:z1H6Lj4VfGrfpzjgt][0m -> Status: SUCCEEDED, Message: 
+[36m[apify.linkedin-jobs-scraper-api runId:xSvO01TpxSFN6fymB][0m -> Status: RUNNING, Message: 
+[36m[apify.linkedin-jobs-scraper-api runId:xSvO01TpxSFN6fymB][0m -> 2026-03-10T10:32:53.333Z ACTOR: Pulling container image of build zheBhwsHVM4FOtWIZ from registry.
+[36m[apify.linkedin-jobs-scraper-api runId:xSvO01TpxSFN6fymB][0m -> 2026-03-10T10:32:53.335Z ACTOR: Creating container.
+[36m[apify.linkedin-jobs-scraper-api runId:xSvO01TpxSFN6fymB][0m -> 2026-03-10T10:32:53.417Z ACTOR: Starting container.
+[36m[apify.linkedin-jobs-scraper-api runId:xSvO01TpxSFN6fymB][0m -> 2026-03-10T10:32:53.420Z ACTOR: Running under "LIMITED_PERMISSIONS" permission level.
+[36m[apify.linkedin-jobs-scraper-api runId:xSvO01TpxSFN6fymB][0m -> 2026-03-10T10:32:54.695Z [32mINFO[39m  System info[90m {"apifyVersion":"3.5.3","apifyClientVersion":"2.21.0","crawleeVersion":"3.15.3","osType":"Linux","nodeVersion":"v20.19.6"}[39m
+[36m[apify.linkedin-jobs-scraper-api runId:xSvO01TpxSFN6fymB][0m -> 2026-03-10T10:32:54.805Z Input: {
+[36m[apify.linkedin-jobs-scraper-api runId:xSvO01TpxSFN6fymB][0m -> 2026-03-10T10:32:54.806Z   keywords: [32m'Sales Operations Analyst'[39m,
+[36m[apify.linkedin-jobs-scraper-api runId:xSvO01TpxSFN6fymB][0m -> 2026-03-10T10:32:54.807Z   location: [32m'United States'[39m,
+[36m[apify.linkedin-jobs-scraper-api runId:xSvO01TpxSFN6fymB][0m -> 2026-03-10T10:32:54.809Z   limit: [33m10[39m,
+[36m[apify.linkedin-jobs-scraper-api runId:xSvO01TpxSFN6fymB][0m -> 2026-03-10T10:32:54.810Z   page_number: [33m1[39m
+[36m[apify.linkedin-jobs-scraper-api runId:xSvO01TpxSFN6fymB][0m -> 2026-03-10T10:32:54.811Z }
+[36m[apify.linkedin-jobs-scraper-api runId:xSvO01TpxSFN6fymB][0m -> 2026-03-10T10:33:02.623Z Successfully processed 10 jobs
+[36m[apify.linkedin-jobs-scraper-api runId:xSvO01TpxSFN6fymB][0m -> Status: SUCCEEDED, Message: 
+[36m[apify.linkedin-jobs-scraper-api runId:VShybvbG5CJpOLtus][0m -> Status: RUNNING, Message: 
+[36m[apify.linkedin-jobs-scraper-api runId:VShybvbG5CJpOLtus][0m -> 2026-03-10T10:33:10.326Z ACTOR: Pulling container image of build zheBhwsHVM4FOtWIZ from registry.
+[36m[apify.linkedin-jobs-scraper-api runId:VShybvbG5CJpOLtus][0m -> 2026-03-10T10:33:10.327Z ACTOR: Creating container.
+[36m[apify.linkedin-jobs-scraper-api runId:VShybvbG5CJpOLtus][0m -> 2026-03-10T10:33:10.370Z ACTOR: Starting container.
+[36m[apify.linkedin-jobs-scraper-api runId:VShybvbG5CJpOLtus][0m -> 2026-03-10T10:33:10.371Z ACTOR: Running under "LIMITED_PERMISSIONS" permission level.
+[36m[apify.linkedin-jobs-scraper-api runId:VShybvbG5CJpOLtus][0m -> 2026-03-10T10:33:11.147Z [32mINFO[39m  System info[90m {"apifyVersion":"3.5.3","apifyClientVersion":"2.21.0","crawleeVersion":"3.15.3","osType":"Linux","nodeVersion":"v20.19.6"}[39m
+[36m[apify.linkedin-jobs-scraper-api runId:VShybvbG5CJpOLtus][0m -> 2026-03-10T10:33:11.242Z Input: {
+[36m[apify.linkedin-jobs-scraper-api runId:VShybvbG5CJpOLtus][0m -> 2026-03-10T10:33:11.243Z   keywords: [32m'Growth Operations'[39m,
+[36m[apify.linkedin-jobs-scraper-api runId:VShybvbG5CJpOLtus][0m -> 2026-03-10T10:33:11.244Z   location: [32m'United States'[39m,
+[36m[apify.linkedin-jobs-scraper-api runId:VShybvbG5CJpOLtus][0m -> 2026-03-10T10:33:11.244Z   limit: [33m10[39m,
+[36m[apify.linkedin-jobs-scraper-api runId:VShybvbG5CJpOLtus][0m -> 2026-03-10T10:33:11.245Z   page_number: [33m1[39m
+[36m[apify.linkedin-jobs-scraper-api runId:VShybvbG5CJpOLtus][0m -> 2026-03-10T10:33:11.245Z }
+[36m[apify.linkedin-jobs-scraper-api runId:VShybvbG5CJpOLtus][0m -> 2026-03-10T10:33:19.145Z Successfully processed 10 jobs
+[36m[apify.linkedin-jobs-scraper-api runId:VShybvbG5CJpOLtus][0m -> Status: SUCCEEDED, Message: 
+[36m[apify.linkedin-jobs-scraper-api runId:9DbhUFOaGzQadjJJg][0m -> Status: RUNNING, Message: 
+[36m[apify.linkedin-jobs-scraper-api runId:9DbhUFOaGzQadjJJg][0m -> 2026-03-10T10:33:26.035Z ACTOR: Pulling container image of build zheBhwsHVM4FOtWIZ from registry.
+[36m[apify.linkedin-jobs-scraper-api runId:9DbhUFOaGzQadjJJg][0m -> 2026-03-10T10:33:26.036Z ACTOR: Creating container.
+[36m[apify.linkedin-jobs-scraper-api runId:9DbhUFOaGzQadjJJg][0m -> 2026-03-10T10:33:26.076Z ACTOR: Starting container.
+[36m[apify.linkedin-jobs-scraper-api runId:9DbhUFOaGzQadjJJg][0m -> 2026-03-10T10:33:26.077Z ACTOR: Running under "LIMITED_PERMISSIONS" permission level.
+[36m[apify.linkedin-jobs-scraper-api runId:9DbhUFOaGzQadjJJg][0m -> 2026-03-10T10:33:26.902Z [32mINFO[39m  System info[90m {"apifyVersion":"3.5.3","apifyClientVersion":"2.21.0","crawleeVersion":"3.15.3","osType":"Linux","nodeVersion":"v20.19.6"}[39m
+[36m[apify.linkedin-jobs-scraper-api runId:9DbhUFOaGzQadjJJg][0m -> 2026-03-10T10:33:27.039Z Input: {
+[36m[apify.linkedin-jobs-scraper-api runId:9DbhUFOaGzQadjJJg][0m -> 2026-03-10T10:33:27.039Z   keywords: [32m'Business Operations Analyst'[39m,
+[36m[apify.linkedin-jobs-scraper-api runId:9DbhUFOaGzQadjJJg][0m -> 2026-03-10T10:33:27.040Z   location: [32m'United States'[39m,
+[36m[apify.linkedin-jobs-scraper-api runId:9DbhUFOaGzQadjJJg][0m -> 2026-03-10T10:33:27.041Z   limit: [33m10[39m,
+[36m[apify.linkedin-jobs-scraper-api runId:9DbhUFOaGzQadjJJg][0m -> 2026-03-10T10:33:27.042Z   page_number: [33m1[39m
+[36m[apify.linkedin-jobs-scraper-api runId:9DbhUFOaGzQadjJJg][0m -> 2026-03-10T10:33:27.042Z }
+[36m[apify.linkedin-jobs-scraper-api runId:9DbhUFOaGzQadjJJg][0m -> 2026-03-10T10:33:34.663Z Successfully processed 10 jobs
+[36m[apify.linkedin-jobs-scraper-api runId:9DbhUFOaGzQadjJJg][0m -> Status: SUCCEEDED, Message: 
+
+── Scraping LinkedIn  (10/title × 5 titles = 50) ──
+  'Revenue Operations Analyst'  (requesting 10)
+    → 10 returned
+  'GTM Operations'  (requesting 10)
+    → 10 returned
+  'Sales Operations Analyst'  (requesting 10)
+    → 10 returned
+  'Growth Operations'  (requesting 10)
+    → 10 returned
+  'Business Operations Analyst'  (requesting 10)
+    → 10 returned
+
+✓  48 unique postings (50 fetched) → /home/runner/work/career-os/career-os/data/raw/2026-03-10_scrape.json
+   Next: python3 scripts/process_layer1.py
+
+── Processing 48 postings from 2026-03-10_scrape.json ──
+   Batch size: 10  |  Batches: 5
+
+  Batch 1/5  (postings 1–10)
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 86, in handle_request
+    self._send_request_headers(**kwargs)
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 144, in _send_request_headers
+    with map_exceptions({h11.LocalProtocolError: LocalProtocolError}):
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.LocalProtocolError: Illegal header value b'sk-ant-api03-R2-5oVBFrsoGtwP5WFYI6NMzlxitREzHQNC4mrKunkCpVoAnVYta6wVJ6Jil-H8vg\n  klITfuYIkNq7rYpScQjDA-qeU3qQAA'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1072, in request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.LocalProtocolError: Illegal header value b'sk-ant-api03-R2-5oVBFrsoGtwP5WFYI6NMzlxitREzHQNC4mrKunkCpVoAnVYta6wVJ6Jil-H8vg\n  klITfuYIkNq7rYpScQjDA-qeU3qQAA'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/work/career-os/career-os/scripts/process_layer1.py", line 367, in <module>
+    main(run_date=args.date, file_override=args.file)
+  File "/home/runner/work/career-os/career-os/scripts/process_layer1.py", line 330, in main
+    signals = extract_signals(client, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/career-os/career-os/scripts/process_layer1.py", line 166, in extract_signals
+    message = client.messages.create(
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/anthropic/_utils/_utils.py", line 282, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/anthropic/resources/messages/messages.py", line 996, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1364, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/anthropic/_base_client.py", line 1104, in request
+    raise APIConnectionError(request=request) from err
+anthropic.APIConnectionError: Connection error.
