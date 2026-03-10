@@ -23,8 +23,10 @@ env/
 data/raw/
 !data/raw/.gitkeep
 
-# Keep summaries and sprints (these are the outputs)
+# Keep summaries, sprints, contacts, and CRM (these are the outputs)
 # data/summaries/ — committed
+# data/contacts/  — committed (contact dossiers and drafts)
+# data/crm.json   — committed (CRM status tracking)
 # sprints/        — committed
 # journal.txt     — committed
 # journal_summary.txt — committed
