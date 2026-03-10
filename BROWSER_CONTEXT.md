@@ -63,18 +63,23 @@ Sprint card is the weekly forcing function; Layer 5 quality depends on Layers 1�
 17
 Stub outreach targets in Layer 4 (name + one-line rationale only)
 Layer 5 not yet built; stub keeps card functional without over-engineering prematurely
+18
+Use harvestapi/linkedin-profile-scraper (not profile-search) for contact scraping
+Same actor as Roman's own profile fetch, confirmed working, takes URL directly; profile-search is a search actor only
+19
+Layer 5 is manual trigger only
+Outreach targeting requires Roman's review of sprint card before drafts are generated; highest quality bar in the system
 
 
 Section 3: Current State
 Last updated: March 10, 2026
 
 Current State:
-- Layer 4 fully live — sprint card format locked (5 fields: learning priority, 3 outreach targets, portfolio task, positioning reminder), first card generated from synthesis_memo.md, output at sprints/sprint_2026-03-10.md
-- Outreach targets stubbed (role + one-line rationale) pending Layer 5 — intentional; Target 3 (Donaldson contact) is actionable now
-- GitHub Actions automation live for Layers 1–3 + 6; email delivery via Gmail SMTP added to all workflows, GMAIL_APP_PASSWORD secret needed to activate
-- Cost validated at ~$1.60/month across all layers, within $5/month target
+- Layer 5 (Network Intelligence) fully built — scrapes contacts via harvestapi/linkedin-profile-scraper, generates dossiers, drafts LinkedIn DM + email + 10-day follow-up per contact, updates crm.json, emails combined weekly digest to romanlicursi@gmail.com
+- Layer 4 rebuilt as script (layer4.py) with correct stub format (name | role | company | MISSING | rationale); LinkedIn URL discovery via harvestapi/linkedin-profile-search when MISSING; [Find: Role at Company] fallback for unknowns
+- Tuesday flow locked: Layer 3 at 8am UTC → Layer 4 at 11am UTC → Layer 5 manual trigger → single combined Weekly Digest email
+- All six layers designed; Layers 1–6 fully built and committed to GitHub
 
 Next steps:
-- Trigger manual Layer 1 workflow run from GitHub Actions tab to confirm full pipeline works end-to-end in the cloud
-- Add GMAIL_APP_PASSWORD secret to GitHub repo to activate email delivery
-- Begin Layer 5 design once Layer 4 produces at least 2–3 validated sprint cards
+- Update current sprint card targets to name | role | company | linkedin_url | rationale format, then trigger Layer 5 from GitHub Actions to validate end-to-end
+- Add GMAIL_APP_PASSWORD secret to GitHub repo if not yet active
