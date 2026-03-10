@@ -17,7 +17,7 @@ Career OS replaces that with a system that:
 - Generates a minimal weekly sprint card: one learning priority, three outreach targets, one portfolio task, one positioning reminder
 - Drafts high-precision outreach for each target, drawing on dossier research and shared signals — then waits for human review before anything is sent
 
-The system gets sharper over time. Six months of automated runs means six months of market signal accumulation, career path data, and feedback from actual outreach attempts. The GitHub commit history is the proof of operation — it can't be faked retroactively.
+The system gets sharper over time. Six months of automated runs means six months of market signal accumulation, career path data, and feedback from actual outreach attempts.
 
 ---
 
