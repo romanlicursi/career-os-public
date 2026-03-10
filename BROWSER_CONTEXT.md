@@ -57,18 +57,24 @@ Free tier, no laptop dependency, secrets managed securely, workflows commit data
 15
 Raw files not committed to GitHub — ephemeral per run
 Keeps repo clean; summaries in data/summaries/ are source of truth between runs
+16
+Build Layer 4 before Layer 5
+Sprint card is the weekly forcing function; Layer 5 quality depends on Layers 1–4 validated first
+17
+Stub outreach targets in Layer 4 (name + one-line rationale only)
+Layer 5 not yet built; stub keeps card functional without over-engineering prematurely
 
 
 Section 3: Current State
 Last updated: March 10, 2026
 
 Current State:
-- Layer 3 fully live — automated pipeline runs clean: Apify scrapes roman_profile.json + roman_posts.json → synthesis_memo.md written and versioned; first memo produced actionable signal (Salesforce gap, backwards LinkedIn metrics, CAUHEC case study)
-- Full automation migrated from local cron to GitHub Actions — four workflows built (Layer 1 weekly, Layer 2 monthly, Layer 3 weekly, Layer 6 monthly), repo pushed, secrets added, laptop dependency eliminated
-- Email delivery not yet built — workflows log only for now; notify.py to be added as a second pass
+- Layer 4 fully live — sprint card format locked (5 fields: learning priority, 3 outreach targets, portfolio task, positioning reminder), first card generated from synthesis_memo.md, output at sprints/sprint_2026-03-10.md
+- Outreach targets stubbed (role + one-line rationale) pending Layer 5 — intentional; Target 3 (Donaldson contact) is actionable now
+- GitHub Actions automation live for Layers 1–3 + 6; email delivery via Gmail SMTP added to all workflows, GMAIL_APP_PASSWORD secret needed to activate
 - Cost validated at ~$1.60/month across all layers, within $5/month target
 
 Next steps:
 - Trigger manual Layer 1 workflow run from GitHub Actions tab to confirm full pipeline works end-to-end in the cloud
-- Build email delivery (notify.py) and add notification steps into existing GitHub Actions workflows
-- Act on first memo: Salesforce Trailhead, rewrite CAUHEC/Roger bullets with real numbers, draft CAUHEC case study
+- Add GMAIL_APP_PASSWORD secret to GitHub repo to activate email delivery
+- Begin Layer 5 design once Layer 4 produces at least 2–3 validated sprint cards
