@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Raw data — never commit (large files, contains scraped PII)
+data/raw/
+!data/raw/.gitkeep
+
+# Keep summaries and sprints (these are the outputs)
+# data/summaries/ — committed
+# sprints/        — committed
+# journal.txt     — committed
+# journal_summary.txt — committed

@@ -1,0 +1,983 @@
+{
+  "meta": {
+    "last_updated": "2026-03-09",
+    "total_postings_processed": 49,
+    "run_dates": [
+      "2026-03-09"
+    ]
+  },
+  "tools": {
+    "excel": {
+      "count": 8,
+      "classification": "core",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "salesforce (sfdc)": {
+      "count": 3,
+      "classification": "core",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "tableau": {
+      "count": 5,
+      "classification": "core",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "looker": {
+      "count": 2,
+      "classification": "differentiating",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "addepar": {
+      "count": 1,
+      "classification": "emerging",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "powerpoint": {
+      "count": 1,
+      "classification": "core",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "word": {
+      "count": 1,
+      "classification": "core",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "salesforce": {
+      "count": 10,
+      "classification": "core",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "google sheets": {
+      "count": 1,
+      "classification": "core",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "g-suite": {
+      "count": 1,
+      "classification": "core",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "microsoft office": {
+      "count": 3,
+      "classification": "core",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "sql": {
+      "count": 3,
+      "classification": "core",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "power bi": {
+      "count": 1,
+      "classification": "differentiating",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "python": {
+      "count": 1,
+      "classification": "differentiating",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "r": {
+      "count": 1,
+      "classification": "differentiating",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "nielsen": {
+      "count": 1,
+      "classification": "differentiating",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "infilect": {
+      "count": 1,
+      "classification": "emerging",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "stay in front": {
+      "count": 1,
+      "classification": "emerging",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "spectra": {
+      "count": 1,
+      "classification": "emerging",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "sap": {
+      "count": 1,
+      "classification": "differentiating",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "oracle": {
+      "count": 1,
+      "classification": "differentiating",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "netsuite": {
+      "count": 1,
+      "classification": "differentiating",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "edi (x12/edifact)": {
+      "count": 1,
+      "classification": "emerging",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "erp systems": {
+      "count": 1,
+      "classification": "differentiating",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "marketing automation platforms": {
+      "count": 1,
+      "classification": "core",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "cpq": {
+      "count": 1,
+      "classification": "differentiating",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "sap s/4hana": {
+      "count": 1,
+      "classification": "differentiating",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "kpi dashboards": {
+      "count": 3,
+      "classification": "core",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "udemy": {
+      "count": 1,
+      "classification": "emerging",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    },
+    "browser-based tools": {
+      "count": 1,
+      "classification": "emerging",
+      "first_seen": "2026-03-09",
+      "last_seen": "2026-03-09"
+    }
+  },
+  "workflow_ownership_verbs": {
+    "build": 23,
+    "manage": 30,
+    "own": 19,
+    "drive": 25,
+    "partner": 18,
+    "design": 14,
+    "optimize": 14,
+    "lead": 18,
+    "implement": 14,
+    "enable": 13,
+    "support": 16,
+    "scale": 13,
+    "operationalize": 3,
+    "streamline": 3,
+    "architect": 3,
+    "analyze": 7,
+    "execute": 4,
+    "develop": 10,
+    "deliver": 3,
+    "assess": 2,
+    "facilitate": 1
+  },
+  "company_stage_breakdown": {
+    "enterprise": 21,
+    "series_b": 2,
+    "series_a": 3,
+    "growth": 10,
+    "unknown": 9,
+    "pre_seed": 0,
+    "seed": 1,
+    "series_c_plus": 3
+  },
+  "ai_exposure": {
+    "automatable": [
+      "basic data extraction and compilation from databases",
+      "creating and producing compliance reports from defined metrics",
+      "scheduling and coordinating conference logistics",
+      "merchant onboarding configuration and boarding template management",
+      "reconciliation between reporting systems and custodians",
+      "Manual vendor onboarding and credentialing workflows",
+      "Repetitive ticket triage and support response",
+      "Data hygiene checks in Salesforce",
+      "Dashboard creation and basic metrics reporting",
+      "Meeting notes and recap summaries",
+      "Post-campaign analysis of loyalty data",
+      "distributing standardized scorecards and dashboards on a consistent cadence",
+      "ad-hoc data analysis using existing datasets",
+      "routine Salesforce report and dashboard generation",
+      "data quality control and reporting standardization",
+      "tracking key metrics within customer acquisition funnels",
+      "data synchronization and data integrity management across marketing systems",
+      "routine user engagement reporting and performance tracking",
+      "EDI transaction processing and fulfillment workflow execution",
+      "training material updates and content revision",
+      "standard campaign execution and scheduling",
+      "Evaluating AI-generated research reports for factual accuracy and data reliability",
+      "Performing side-by-side output quality evaluations",
+      "Fact-checking and validating information from reports",
+      "Generating KPI dashboards and standard business reporting outputs",
+      "Drafting and deploying automated drip email campaigns"
+    ],
+    "durable": [
+      "cross-functional stakeholder collaboration and relationship management",
+      "client-facing issue resolution and escalation management",
+      "designing capacity planning frameworks grounded in operational workflows",
+      "translating client business needs into platform configurations",
+      "governing GTM change processes across territories and account hierarchies",
+      "Cross-functional stakeholder alignment and relationship management",
+      "Strategic advisory to executive leadership",
+      "Vendor escalation handling and lifecycle accountability",
+      "Building and enforcing operational SOPs",
+      "Judgment-based decision-making under ambiguity and pressure",
+      "Executive-level communication and narrative building",
+      "translating business needs into clear analytical frameworks",
+      "presenting findings and analysis to department leadership",
+      "partnering cross-functionally with sales, finance, and engineering stakeholders",
+      "identifying sales process gaps and recommending scalable improvements",
+      "territory, segmentation, and coverage design during annual planning",
+      "cross-functional stakeholder communication and relationship management",
+      "strategic partnership development with senior clients and agencies",
+      "coaching and mentoring of workflow teams",
+      "consultative sales approach and crafting bespoke media solutions",
+      "competitive positioning analysis requiring qualitative judgment",
+      "center integration and cultural ambassador responsibilities",
+      "Eliciting and documenting requirements from clinical and business stakeholders",
+      "Translating regulatory and compliance requirements into functional specifications",
+      "Performing gap analysis between existing workflows and proposed systems",
+      "Facilitating cross-functional alignment meetings and managing stakeholder feedback",
+      "Defining product roadmaps and release priorities"
+    ],
+    "ai_amplified": [
+      "cloud cost optimization and FinOps strategy using AI-informed spend data",
+      "equity research analysis using AI-generated content evaluation and SEC filings",
+      "workforce capacity modeling and demand/supply visibility with automated alerting",
+      "customer segmentation and territory planning supported by BI and analytics tooling",
+      "Identifying repetitive workflows for automation at every step",
+      "Evaluation and implementation of AI-powered tools across operations",
+      "Generating insights from large data sets to drive business decisions",
+      "Pipeline analysis and forecasting for revenue teams",
+      "Personalized customer journey design in CRM and loyalty programs",
+      "forecasting cadence using AI-driven matching and pipeline data",
+      "synthesizing complex business questions into executive-level recommendations",
+      "go-to-market strategy and GTM innovation leveraging AI CRM capabilities",
+      "seller productivity tracking and performance management at scale",
+      "transforming data analyses into persuasive stories that influence decision-making",
+      "data-driven audience segmentation and persona development for targeted engagement",
+      "competitive defensibility analysis of AI-native vs legacy enterprise software vendors",
+      "end-to-end marketing automation strategy at global scale",
+      "growth operations \u2014 identifying activation and re-engagement opportunities via user data",
+      "market scenario modeling for AI-driven disruption in EDI and fulfillment",
+      "Defining realistic AI/LLM product features based on business requirements",
+      "Analyzing sales performance and marketing analytics at scale using AI-generated reports",
+      "Building and refining STARS performance metric predictions using AI-assisted dashboards",
+      "Identifying operational pain points in release management using AI-assisted process analysis"
+    ]
+  },
+  "compensation": {
+    "Sales Operations Analyst Lead": {
+      "samples": [
+        {
+          "min": 110000,
+          "max": 140000,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 110000,
+      "avg_max": 140000
+    },
+    "Junior Business Analyst - Mortgage": {
+      "samples": [
+        {
+          "min": 70720,
+          "max": 74880,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 70720,
+      "avg_max": 74880
+    },
+    "Associate, Performance Reporting and Analytics": {
+      "samples": [
+        {
+          "min": 75000,
+          "max": 100000,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 75000,
+      "avg_max": 100000
+    },
+    "Equity Research Associate Analyst $120/hr": {
+      "samples": [
+        {
+          "min": 208000,
+          "max": 249600,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 208000,
+      "avg_max": 249600
+    },
+    "Strategy and Operations Lead": {
+      "samples": [
+        {
+          "min": 153000,
+          "max": 224000,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 153000,
+      "avg_max": 224000
+    },
+    "Program Management Advisor": {
+      "samples": [
+        {
+          "min": 126000,
+          "max": 209880,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 126000,
+      "avg_max": 209880
+    },
+    "Director of Business Operations": {
+      "samples": [
+        {
+          "min": 130000,
+          "max": null,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 130000,
+      "avg_max": null
+    },
+    "Summer Intern, Loyalty & CRM": {
+      "samples": [
+        {
+          "min": 41600,
+          "max": 41600,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 41600,
+      "avg_max": 41600
+    },
+    "Project Manager": {
+      "samples": [
+        {
+          "min": 70000,
+          "max": 85000,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 70000,
+      "avg_max": 85000
+    },
+    "VP, Business Strategy & Operations": {
+      "samples": [
+        {
+          "min": 175000,
+          "max": 200000,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 175000,
+      "avg_max": 200000
+    },
+    "Sales Strategy and Operations Analyst": {
+      "samples": [
+        {
+          "min": 81000,
+          "max": 101200,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 81000,
+      "avg_max": 101200
+    },
+    "Sales Support Analyst": {
+      "samples": [
+        {
+          "min": 68500,
+          "max": 96900,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 68500,
+      "avg_max": 96900
+    },
+    "Revenue Operations Analyst": {
+      "samples": [
+        {
+          "min": 70000,
+          "max": 97500,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 70000,
+      "avg_max": 97500
+    },
+    "Sr. Sales Operations Business Analyst": {
+      "samples": [
+        {
+          "min": 106400,
+          "max": 222600,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 106400,
+      "avg_max": 222600
+    },
+    "B2B Enterprise Global Marketing Lead": {
+      "samples": [
+        {
+          "min": 120000,
+          "max": 180000,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 120000,
+      "avg_max": 180000
+    },
+    "Marketing Specialist": {
+      "samples": [
+        {
+          "min": 56160,
+          "max": 79040,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 56160,
+      "avg_max": 79040
+    },
+    "Training Delivery Specialist - Growth Lab - Email": {
+      "samples": [
+        {
+          "min": 70000,
+          "max": 84000,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 70000,
+      "avg_max": 84000
+    },
+    "Strategy Analyst (Remote)": {
+      "samples": [
+        {
+          "min": 166400,
+          "max": 187200,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 166400,
+      "avg_max": 187200
+    },
+    "Business Analyst -- Entry Level": {
+      "samples": [
+        {
+          "min": 50800,
+          "max": 92100,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 50800,
+      "avg_max": 92100
+    },
+    "Business Analyst": {
+      "samples": [
+        {
+          "min": 60000,
+          "max": 80000,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 60000,
+      "avg_max": 80000
+    },
+    "Business Operations Analyst": {
+      "samples": [
+        {
+          "min": 60000,
+          "max": 94000,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 60000,
+      "avg_max": 94000
+    },
+    "Business Analyst (Remote)": {
+      "samples": [
+        {
+          "min": 83200,
+          "max": 124800,
+          "date": "2026-03-09"
+        }
+      ],
+      "avg_min": 83200,
+      "avg_max": 124800
+    }
+  },
+  "company_velocity": {
+    "coupa": {
+      "display_name": "Coupa",
+      "posting_count": 1,
+      "titles_seen": [
+        "Sr. Lead FinOps Analyst (East Coast) - 11215"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "tekambi": {
+      "display_name": "TEKAMBI",
+      "posting_count": 1,
+      "titles_seen": [
+        "Customer Success Specialist, Tekambi"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "payabli": {
+      "display_name": "Payabli",
+      "posting_count": 1,
+      "titles_seen": [
+        "Operational Specialist"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "cvs health": {
+      "display_name": "CVS Health",
+      "posting_count": 1,
+      "titles_seen": [
+        "Senior Analyst, Financial Operations"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "trellix": {
+      "display_name": "Trellix",
+      "posting_count": 1,
+      "titles_seen": [
+        "Sales Operations Analyst Lead"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "safelite": {
+      "display_name": "Safelite",
+      "posting_count": 1,
+      "titles_seen": [
+        "Sr. Workforce Analyst"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "advanced recruiting partners": {
+      "display_name": "Advanced Recruiting Partners",
+      "posting_count": 1,
+      "titles_seen": [
+        "Data Analytics Coordinator"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "kforce inc": {
+      "display_name": "Kforce Inc",
+      "posting_count": 1,
+      "titles_seen": [
+        "Junior Business Analyst - Mortgage"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "fort point capital partners": {
+      "display_name": "Fort Point Capital Partners",
+      "posting_count": 1,
+      "titles_seen": [
+        "Associate, Performance Reporting and Analytics"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "mercor": {
+      "display_name": "Mercor",
+      "posting_count": 1,
+      "titles_seen": [
+        "Equity Research Associate Analyst $120/hr"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "o.r. trax": {
+      "display_name": "O.R. TRAX",
+      "posting_count": 1,
+      "titles_seen": [
+        "Vendor Support & Operations Manager"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "doordash": {
+      "display_name": "DoorDash",
+      "posting_count": 1,
+      "titles_seen": [
+        "Associate, Revenue Operations - Strategy & Operations"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "destinationyou": {
+      "display_name": "DestinationYou",
+      "posting_count": 1,
+      "titles_seen": [
+        "Senior Business Operations Consultant"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "securitize": {
+      "display_name": "Securitize",
+      "posting_count": 1,
+      "titles_seen": [
+        "Strategy and Operations Manager"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "google": {
+      "display_name": "Google",
+      "posting_count": 1,
+      "titles_seen": [
+        "Strategy and Operations Lead"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "macy's": {
+      "display_name": "Macy's",
+      "posting_count": 1,
+      "titles_seen": [
+        "Program Management Advisor"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "madrivo": {
+      "display_name": "Madrivo",
+      "posting_count": 1,
+      "titles_seen": [
+        "Director of Business Operations"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "e.l.f. beauty": {
+      "display_name": "E.L.F. BEAUTY",
+      "posting_count": 1,
+      "titles_seen": [
+        "Summer Intern, Loyalty & CRM"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "fluency firm": {
+      "display_name": "Fluency Firm",
+      "posting_count": 1,
+      "titles_seen": [
+        "Project Manager"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "th experiential": {
+      "display_name": "TH Experiential",
+      "posting_count": 1,
+      "titles_seen": [
+        "VP, Business Strategy & Operations"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "pluralsight": {
+      "display_name": "Pluralsight",
+      "posting_count": 1,
+      "titles_seen": [
+        "Sales Strategy and Operations Analyst"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "tpx": {
+      "display_name": "TPx",
+      "posting_count": 1,
+      "titles_seen": [
+        "Sales Operations Business Analyst"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "salesforce": {
+      "display_name": "Salesforce",
+      "posting_count": 1,
+      "titles_seen": [
+        "Sales Operations Senior Analyst"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "wells enterprises": {
+      "display_name": "Wells Enterprises",
+      "posting_count": 1,
+      "titles_seen": [
+        "Sales Support Analyst"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "soleo health": {
+      "display_name": "Soleo Health",
+      "posting_count": 1,
+      "titles_seen": [
+        "Commercial Sales Data Analyst"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "newterra": {
+      "display_name": "Newterra",
+      "posting_count": 1,
+      "titles_seen": [
+        "Sales - CRM Analyst"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "ziprecruiter": {
+      "display_name": "ZipRecruiter",
+      "posting_count": 1,
+      "titles_seen": [
+        "Revenue Operations Analyst"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "microsoft": {
+      "display_name": "Microsoft",
+      "posting_count": 1,
+      "titles_seen": [
+        "Sr. Sales Operations Business Analyst"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "braintrust": {
+      "display_name": "Braintrust",
+      "posting_count": 1,
+      "titles_seen": [
+        "Senior Sales Analyst"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "motorola mobility (a lenovo company)": {
+      "display_name": "Motorola Mobility (a Lenovo Company)",
+      "posting_count": 1,
+      "titles_seen": [
+        "B2B Enterprise Global Marketing Lead"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "ups": {
+      "display_name": "UPS",
+      "posting_count": 1,
+      "titles_seen": [
+        "Global Marketing Automation Manager - International"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "randstad usa": {
+      "display_name": "Randstad USA",
+      "posting_count": 1,
+      "titles_seen": [
+        "Marketing Specialist"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "a stealth-mode ai healthcare startup (based in san mateo, ca)": {
+      "display_name": "A Stealth-mode AI Healthcare Startup (based in San Mateo, CA)",
+      "posting_count": 1,
+      "titles_seen": [
+        "Growth & Operations"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "warner music group": {
+      "display_name": "Warner Music Group",
+      "posting_count": 1,
+      "titles_seen": [
+        "Sr. Manager, Direct-to-Fan (Latin America)"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "airbnb": {
+      "display_name": "Airbnb",
+      "posting_count": 1,
+      "titles_seen": [
+        "Market Associate"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "alphasights": {
+      "display_name": "AlphaSights",
+      "posting_count": 1,
+      "titles_seen": [
+        "Growth Operations Associate"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "kindercare learning companies": {
+      "display_name": "KinderCare Learning Companies",
+      "posting_count": 1,
+      "titles_seen": [
+        "Growth Operations Business Partner - Up to 75% Travel"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "snap inc.": {
+      "display_name": "Snap Inc.",
+      "posting_count": 1,
+      "titles_seen": [
+        "Senior Client Partner"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "google operations center": {
+      "display_name": "Google Operations Center",
+      "posting_count": 1,
+      "titles_seen": [
+        "Training Delivery Specialist - Growth Lab - Email"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "north star staffing": {
+      "display_name": "North Star Staffing",
+      "posting_count": 1,
+      "titles_seen": [
+        "Strategy Analyst (Remote)"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "ciklum": {
+      "display_name": "Ciklum",
+      "posting_count": 1,
+      "titles_seen": [
+        "Senior Business Analyst"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "capital one": {
+      "display_name": "Capital One",
+      "posting_count": 1,
+      "titles_seen": [
+        "Senior Business Analyst-Issuer Management"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "asana": {
+      "display_name": "Asana",
+      "posting_count": 1,
+      "titles_seen": [
+        "Revenue Operations Business Process Analyst"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "get offers": {
+      "display_name": "Get Offers",
+      "posting_count": 1,
+      "titles_seen": [
+        "Business Analyst (Remote)"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "tiger resourcing group": {
+      "display_name": "Tiger Resourcing Group",
+      "posting_count": 1,
+      "titles_seen": [
+        "Senior Tolling Business Analyst"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "turing": {
+      "display_name": "Turing",
+      "posting_count": 1,
+      "titles_seen": [
+        "Remote Business Analyst - 57510"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "cgi": {
+      "display_name": "CGI",
+      "posting_count": 1,
+      "titles_seen": [
+        "Business Analyst -- Entry Level"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "empower": {
+      "display_name": "Empower",
+      "posting_count": 1,
+      "titles_seen": [
+        "Business Analyst"
+      ],
+      "last_seen": "2026-03-09"
+    },
+    "fico": {
+      "display_name": "FICO",
+      "posting_count": 1,
+      "titles_seen": [
+        "Business Operations Analyst"
+      ],
+      "last_seen": "2026-03-09"
+    }
+  },
+  "operator_persona_language": [
+    "strategic driving force of our FinOps practice",
+    "facilitator, not an operator",
+    "systems thinker",
+    "scrappy, high-impact tools",
+    "facts-based insights to generate consensus",
+    "trusted partner to a portfolio of clients",
+    "bridge between technical and operational teams",
+    "workforce capability maturity",
+    "owner's mindset",
+    "operational engine driving our next phase of exponential growth",
+    "right hand to the CEO",
+    "data-driven and committed to continuous improvement",
+    "cross-functional operator",
+    "remove founders from daily vendor work",
+    "intersection of business strategy, operations, and people leadership",
+    "thought-partner to the business",
+    "trusted advisor to the regional SVP",
+    "data-driven decision maker",
+    "strategic liaison between business stakeholders and Salesforce solutions",
+    "at the center of how our go to market teams function",
+    "turning complex executive-level questions into insights that shape business decisions",
+    "bias for action",
+    "data-driven, multi-channel, sustained campaign approach",
+    "generalist to work together to scale to hundreds of customers",
+    "highly commercial, analytically driven role",
+    "company and cultural ambassador",
+    "trusted lead",
+    "business owner for the partnership",
+    "extreme ownership mentality",
+    "white space thinking",
+    "high-growth disruptive startup",
+    "data-driven scalable strategies",
+    "operational excellence and maximizing sales productivity",
+    "systems thinker with delivery authority",
+    "go-getters who thrive in both the details and big-picture thinking"
+  ]
+}
