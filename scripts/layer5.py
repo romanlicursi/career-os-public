@@ -24,6 +24,12 @@ Notes:
     - One Claude call per contact: dossier + both drafts + follow-up in one shot.
     - Existing CRM contacts are skipped — no re-drafting for someone already tracked.
     - Raw Apify output is ephemeral — not saved to repo.
+    - Sprint card outreach targets may use MISSING for linkedin_url (produced by layer4.py).
+      When MISSING, layer5.py searches for the URL via harvestapi/linkedin-profile-search
+      before scraping. If search returns nothing, the contact is included in the email
+      with a note and processing continues.
+    - Email subject: "Career OS — Weekly Digest [date]". Sprint card is prepended to the
+      email body so the full digest arrives in one message.
 """
 
 import json
@@ -47,7 +53,8 @@ GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "")
 GMAIL_USER         = "romanlicursi@gmail.com"
 
 MODEL         = "claude-sonnet-4-6"
-ACTOR_PROFILE = "harvestapi/linkedin-profile-scraper"  # direct URL lookup, same as fetch_roman_profile.py
+ACTOR_PROFILE = "harvestapi/linkedin-profile-scraper"   # direct URL lookup, confirmed working
+ACTOR_SEARCH  = "harvestapi/linkedin-profile-search"    # search by name+company when URL is MISSING
 
 ROOT          = Path(__file__).parent.parent
 SPRINTS_DIR   = ROOT / "sprints"
@@ -72,15 +79,18 @@ def parse_outreach_targets(card_text: str) -> list[dict]:
     Parse outreach targets from sprint card.
     Required format per target line:
         **Name** | Role | Company | https://linkedin.com/in/... | Rationale
+        **Name** | Role | Company | MISSING | Rationale   ← produced by layer4.py
 
-    Exits with a specific error message if format is wrong or linkedin_url is missing.
+    MISSING is a valid placeholder — layer5.py will search for the URL before scraping.
+    Exits only if the pipe-delimited structure itself is malformed (wrong number of fields
+    or a non-URL / non-MISSING value in the linkedin_url slot).
     """
     match = re.search(r"## Outreach Targets\n(.*?)(?:\n## |\Z)", card_text, re.DOTALL)
     if not match:
         print("ERROR: Sprint card has no '## Outreach Targets' section.")
         sys.exit(1)
 
-    section = match.group(1).strip()
+    section   = match.group(1).strip()
     raw_items = re.findall(r"^\d+\.\s+(.+)$", section, re.MULTILINE)
     if not raw_items:
         print("ERROR: No numbered outreach targets found in sprint card.")
@@ -96,7 +106,8 @@ def parse_outreach_targets(card_text: str) -> list[dict]:
             errors.append(
                 f"  Target {i}: only {len(parts)} field(s) found, 5 required.\n"
                 f"    Got:      {item}\n"
-                f"    Expected: **Name** | Role | Company | https://linkedin.com/in/... | Rationale"
+                f"    Expected: **Name** | Role | Company | MISSING | Rationale\n"
+                f"              **Name** | Role | Company | https://linkedin.com/in/... | Rationale"
             )
             continue
 
@@ -106,11 +117,13 @@ def parse_outreach_targets(card_text: str) -> list[dict]:
         linkedin_url = parts[3].strip()
         rationale    = parts[4].strip()
 
-        if not linkedin_url.startswith("http") or "linkedin.com" not in linkedin_url:
+        url_missing = linkedin_url.upper() == "MISSING"
+
+        if not url_missing and (not linkedin_url.startswith("http") or "linkedin.com" not in linkedin_url):
             errors.append(
-                f"  Target {i} ({name}): invalid linkedin_url.\n"
-                f"    Got:      '{linkedin_url}'\n"
-                f"    Expected: https://linkedin.com/in/their-profile"
+                f"  Target {i} ({name}): linkedin_url is neither a valid URL nor MISSING.\n"
+                f"    Got: '{linkedin_url}'\n"
+                f"    Use a full URL (https://linkedin.com/in/...) or the literal word MISSING."
             )
             continue
 
@@ -118,14 +131,13 @@ def parse_outreach_targets(card_text: str) -> list[dict]:
             "name":         name,
             "role":         role,
             "company":      company,
-            "linkedin_url": linkedin_url,
+            "linkedin_url": "" if url_missing else linkedin_url,
+            "url_missing":  url_missing,
             "rationale":    rationale,
         })
 
     if errors:
-        print("ERROR: Sprint card outreach targets are not in the required format.\n")
-        print("Required format for each target:")
-        print("    1. **Name** | Role | Company | https://linkedin.com/in/... | Rationale\n")
+        print("ERROR: Sprint card outreach targets are malformed.\n")
         print("Issues found:")
         for e in errors:
             print(e)
@@ -150,6 +162,7 @@ def parse_sprint_card(path: Path) -> dict:
         "sprint_date":          sprint_date,
         "positioning_reminder": positioning_reminder,
         "targets":              targets,
+        "card_text":            text,   # included verbatim in the combined digest email
     }
 
 # ── Layer 1 signal picker ──────────────────────────────────────────────────────
@@ -225,6 +238,46 @@ def scrape_profile(apify_client: ApifyClient, linkedin_url: str, name: str) -> l
 
     print(f"  [apify] ✓ {len(career_moves)} career move(s) extracted for {name}")
     return career_moves
+
+# ── LinkedIn URL discovery (for MISSING targets) ──────────────────────────────
+
+def find_linkedin_url(apify_client: ApifyClient, name: str, company: str) -> str:
+    """
+    Search for a person's LinkedIn URL by name + company.
+    Uses harvestapi/linkedin-profile-search (search actor, not direct scraper).
+    Returns URL string if found, empty string otherwise.
+
+    Handles the [Find: Role at Company] name format produced by layer4.py
+    by searching on company alone.
+    """
+    # [Find: Role at Company] → search by company only
+    if name.startswith("[Find:") and "]" in name:
+        search_query = company
+    else:
+        search_query = f"{name} {company}".strip()
+
+    print(f"  [apify] Searching for URL: '{search_query}'")
+    try:
+        run   = apify_client.actor(ACTOR_SEARCH).call(
+            run_input={"searchQuery": search_query, "maxItems": 3},
+            timeout_secs=120,
+        )
+        items = list(apify_client.dataset(run["defaultDatasetId"]).iterate_items())
+    except Exception as e:
+        print(f"  [apify] Search error for '{search_query}': {e}")
+        return ""
+
+    if not items:
+        print(f"  [apify] No search results for '{search_query}'")
+        return ""
+
+    url = (items[0].get("linkedinUrl") or items[0].get("profileUrl") or "").strip()
+    if url:
+        print(f"  [apify] ✓ Found: {url}")
+    else:
+        print(f"  [apify] Result returned but no URL field found")
+    return url
+
 
 # ── Claude dossier + drafts ────────────────────────────────────────────────────
 
@@ -384,21 +437,40 @@ def find_existing(crm: dict, slug: str) -> dict | None:
 
 # ── Email digest ───────────────────────────────────────────────────────────────
 
-def send_digest_email(processed: list[dict], sprint_date: str) -> None:
+def send_digest_email(processed: list[dict], sprint_date: str, sprint_card_text: str = "") -> None:
     if not GMAIL_APP_PASSWORD:
         print("  WARNING: GMAIL_APP_PASSWORD not set — skipping email delivery.")
         print("  Add the secret to GitHub repo settings to enable delivery.")
         return
 
     lines = [
-        f"Career OS — Layer 5 Drafts | {sprint_date}",
+        f"Career OS — Weekly Digest | {sprint_date}",
         f"Generated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}",
         "",
     ]
 
+    # ── Sprint card section ──
+    if sprint_card_text:
+        lines += ["=" * 56, "SPRINT CARD", "=" * 56, ""]
+        lines.append(sprint_card_text.strip())
+        lines += ["", "=" * 56, "OUTREACH DRAFTS", "=" * 56, ""]
+    else:
+        lines += ["=" * 56, "OUTREACH DRAFTS", "=" * 56, ""]
+
+    # ── Per-contact sections ──
     for item in processed:
+        lines.append("")
+
+        # Contact where URL search failed — include note, no drafts
+        if item.get("url_not_found"):
+            c = item["contact"]
+            lines.append(f"{c['name']} | {c['role']} | {c['company']}")
+            lines.append("⚠ LinkedIn URL missing — search returned no results. No drafts generated.")
+            lines.append("  To generate drafts: add a LinkedIn URL to the sprint card and re-run Layer 5.")
+            lines.append("")
+            continue
+
         d = item["dossier"]
-        lines += ["=" * 56, ""]
         lines.append(f"{d.get('full_name','')} | {d.get('current_role','')} | {d.get('current_company','')}")
         lines.append(f"LinkedIn: {d.get('linkedin_url','')}")
         lines.append("")
@@ -433,7 +505,7 @@ def send_digest_email(processed: list[dict], sprint_date: str) -> None:
 
     body = "\n".join(lines)
     msg  = MIMEText(body, "plain")
-    msg["Subject"] = f"Career OS — Layer 5 Drafts {sprint_date}"
+    msg["Subject"] = f"Career OS — Weekly Digest {sprint_date}"
     msg["From"]    = f"Career OS <{GMAIL_USER}>"
     msg["To"]      = GMAIL_USER
 
@@ -493,6 +565,17 @@ def main() -> None:
                   f"Skipping — not re-drafting for an existing contact.")
             continue
 
+        # Resolve MISSING LinkedIn URL via search before scraping
+        if contact.get("url_missing"):
+            found_url = find_linkedin_url(apify_client, contact["name"], contact["company"])
+            if found_url:
+                contact["linkedin_url"] = found_url
+                contact["url_missing"]  = False
+            else:
+                print(f"  Could not find LinkedIn URL for {contact['name']} — including in email with note.")
+                processed.append({"contact": contact, "dossier": None, "url_not_found": True})
+                continue
+
         # Scrape profile
         career_moves = scrape_profile(apify_client, contact["linkedin_url"], contact["name"])
 
@@ -533,14 +616,18 @@ def main() -> None:
 
         processed.append({"contact": contact, "dossier": dossier})
 
+    # Contacts with successful dossiers (to save to CRM)
+    dossier_items = [p for p in processed if p.get("dossier") is not None]
+
     if not processed:
         print("\n  No new contacts processed (all may already be in CRM).")
     else:
-        save_crm(crm)
-        print(f"\n  CRM updated → {CRM_PATH} ({len(processed)} new contact(s))")
+        if dossier_items:
+            save_crm(crm)
+            print(f"\n  CRM updated → {CRM_PATH} ({len(dossier_items)} new contact(s))")
 
         print("\n  Sending digest email...")
-        send_digest_email(processed, card["sprint_date"])
+        send_digest_email(processed, card["sprint_date"], sprint_card_text=card.get("card_text", ""))
 
     print("\n══════════════════════════════════════════")
     print(f"  Layer 5 complete. {len(processed)} contact(s) processed.")

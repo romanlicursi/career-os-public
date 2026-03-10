@@ -1,0 +1,40 @@
+name: Layer 4 — Sprint Card
+
+on:
+  schedule:
+    - cron: '0 11 * * 2'   # Every Tuesday at 11am UTC (Layer 3 runs at 8am — 3hr buffer)
+  workflow_dispatch:         # Allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate sprint card
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          mkdir -p data/logs
+          python3 scripts/layer4.py 2>&1 | tee data/logs/layer4-$(date +%Y-%m-%d).log
+
+      - name: Commit sprint card
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sprints/ data/logs/
+          git diff --staged --quiet || git commit -m "Layer 4 sprint card $(date +%Y-%m-%d)"
+          git push
