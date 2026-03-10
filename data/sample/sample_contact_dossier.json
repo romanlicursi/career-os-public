@@ -1,0 +1,23 @@
+{
+  "_note": "Synthetic sample showing Layer 5 output format. Not a real person.",
+  "slug": "alex-sample-revops",
+  "full_name": "Alex Sample",
+  "current_role": "Head of Revenue Operations",
+  "current_company": "Growth-Stage SaaS Co (Series B)",
+  "linkedin_url": "https://www.linkedin.com/in/alex-sample-EXAMPLE",
+  "scraped_at": "2026-03-01",
+  "career_moves": [
+    "Head of Revenue Operations @ Growth-Stage SaaS Co (Jan 2025 – Present)",
+    "Senior RevOps Manager @ Mid-Market SaaS Co (Feb 2023 – Jan 2025)",
+    "Sales Operations Analyst @ Enterprise Software Co (Jun 2021 – Feb 2023)"
+  ],
+  "shared_signals": [
+    "Both have built outbound infrastructure from scratch — Alex stood up a 3-stage sequence across Outreach, Clay, and Salesforce; I built outbound sequences and CRM pipeline at a healthcare workforce org using the same tool stack.",
+    "Both have dealt with the handoff problem between marketing-generated leads and SDR-owned pipeline — the same data hygiene and routing challenges appear in Alex's LinkedIn posts."
+  ],
+  "outreach_angle": "Alex has written about the disconnect between RevOps tooling and the actual workflows that SDRs use day-to-day. I built automation infrastructure inside a smaller org facing the same gap — sequences, CRM pipeline, Clay enrichment — at the same time he was scaling at a well-funded company. My angle is not job-seeking but perspective-gathering: where does automation actually break down when the team scales past 10 reps?",
+  "follow_up_draft": "Alex — following up on my earlier note. I've been thinking more about the tooling-versus-workflow gap you described in your post on Salesforce hygiene. If you have 15 minutes to share how that resolved at scale, I'd find it genuinely useful. — [Name]",
+  "linkedin_draft": "Alex — you've been building RevOps infrastructure at a Series B while I was doing the same at a smaller scale (sequences, Clay, CRM pipeline at a healthcare workforce org). I'm curious where automation actually breaks down once the SDR team hits double digits. Would a short async question be okay? — [Name]",
+  "email_subject": "RevOps automation at scale — where does it actually break down?",
+  "email_draft": "Alex,\n\nWhile building outbound automation at [Org] — CRM pipeline, Clay, Outreach, Zapier — I kept running into the question of which parts of the stack stop working as the team grows. You've scaled RevOps through a Series B. I'm not looking for a referral — I'm trying to understand where the tools most people assume work actually break in practice.\n\nWould you be open to answering one specific question async?\n\n— [Name]"
+}

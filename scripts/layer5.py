@@ -44,13 +44,16 @@ from pathlib import Path
 
 import anthropic
 from apify_client import ApifyClient
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 
 ANTHROPIC_API_KEY  = os.environ.get("ANTHROPIC_API_KEY", "")
 APIFY_TOKEN        = os.environ.get("APIFY_API_TOKEN", "REDACTED_APIFY_TOKEN")
 GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "")
-GMAIL_USER         = "romanlicursi@gmail.com"
+GMAIL_USER         = os.environ.get("GMAIL_USER", "")
 
 MODEL         = "claude-sonnet-4-6"
 ACTOR_PROFILE = "harvestapi/linkedin-profile-scraper"   # direct URL lookup, confirmed working
@@ -248,11 +251,13 @@ def find_linkedin_url(apify_client: ApifyClient, name: str, company: str) -> str
     Returns URL string if found, empty string otherwise.
 
     Handles the [Find: Role at Company] name format produced by layer4.py
-    by searching on company alone.
+    by extracting the role and combining with company for a targeted query.
     """
-    # [Find: Role at Company] → search by company only
+    # [Find: Role at Company] → extract role + combine with company
     if name.startswith("[Find:") and "]" in name:
-        search_query = company
+        inner = name[len("[Find:"):name.index("]")].strip()  # e.g. "GTM Engineer at Outreach"
+        role_part = re.sub(r"\s+at\s+\S.*$", "", inner, flags=re.IGNORECASE).strip()
+        search_query = f"{role_part} {company}".strip()
     else:
         search_query = f"{name} {company}".strip()
 
@@ -282,10 +287,10 @@ def find_linkedin_url(apify_client: ApifyClient, name: str, company: str) -> str
 # ── Claude dossier + drafts ────────────────────────────────────────────────────
 
 DOSSIER_PROMPT = """\
-You are generating a contact dossier and outreach drafts for Roman Licursi's Career OS.
-Roman's background: CS junior at UW-Madison. Built outbound automation at a healthcare \
-startup (CAUHEC Connect — outbound sequences, CRM pipeline, Clay, ReachInbox, Zapier). \
-Incoming RevOps intern at Donaldson, summer 2026. Frame him as someone who builds \
+You are generating a contact dossier and outreach drafts for the Career OS user.
+User background: Technical background (CS). Built outbound automation at an early-stage org \
+(outbound sequences, CRM pipeline, Clay, ReachInbox, Zapier). Incoming RevOps internship \
+confirmed at a mid-market industrial company, summer 2026. Frame them as someone who builds \
 GTM systems, not someone looking for a job.
 
 Generate a single JSON object. No preamble, no explanation, no markdown. \
@@ -320,9 +325,9 @@ linkedin_draft rules:
   - No flattery opener. First sentence hooks on something specific and real about them \
 or their company.
   - Ask proportional to seniority: IC/mid-level → async question; \
-Director+ → 20-minute conversation framed around their perspective, not Roman's job search.
+Director+ → 20-minute conversation framed around their perspective, not a job search.
   - Must reference at least one detail from shared_signals or their specific career history.
-  - Sign off: "— Roman"
+  - Sign off: "— [Name]"
   - A message that could have been sent to anyone is a failure.
 
 email_subject rules:
@@ -369,13 +374,13 @@ Last career moves (up to 3):
 
 Outreach angle (from sprint card): {contact['rationale']}
 
-Roman's positioning this week: {positioning_reminder}
+User's positioning this week: {positioning_reminder}
 
 Market signal (relevant to this contact's stage/role):
 {l1_signal}
 
 ---
-Roman's Decision Constitution (CLAUDE.md):
+Decision Constitution (CLAUDE.md):
 {claude_md_text}
 """
 
@@ -500,7 +505,7 @@ def send_digest_email(processed: list[dict], sprint_date: str, sprint_card_text:
     lines += [
         "=" * 56,
         "",
-        "CRM: https://github.com/romanlicursi/career-os/blob/main/data/crm.json",
+        f"CRM: {os.environ.get('CAREER_OS_REPO_URL', 'data/crm.json')}",
     ]
 
     body = "\n".join(lines)

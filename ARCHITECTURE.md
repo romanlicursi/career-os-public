@@ -14,9 +14,14 @@ career-os/
 ├── data/
 │   ├── raw/                    # Raw scraper outputs. Never loaded into context after processing.
 │   ├── summaries/              # Compressed layer outputs. What actually gets loaded.
-│   │   ├── layer1_digest.json  # Skill/tool trends, workflow verbs, stage signals, persona language.
-│   │   ├── layer2_digest.json  # Career path clusters, bridge moves, launchpad environments.
-│   │   └── synthesis_memo.md   # Latest Layer 3 output. Input to sprint card generation.
+│   │   ├── layer0_signals.json       # Compressed Layer 0 signals (emerging titles, YC, VC themes).
+│   │   ├── layer0_orientation.md     # Latest Layer 0 orientation memo. Overwrites each monthly run.
+│   │   ├── layer0_orientation_{date}.md  # Dated archive of each orientation run.
+│   │   ├── layer1_digest.json        # Skill/tool trends, workflow verbs, stage signals, persona language.
+│   │   ├── layer2_digest.json        # Career path clusters, bridge moves, launchpad environments.
+│   │   ├── roman_profile_summary.json  # Compressed Layer 3 LinkedIn profile (raw profile never enters context).
+│   │   ├── synthesis_memo.md         # Latest Layer 3 output. Input to sprint card generation.
+│   │   └── synthesis_memo_{date}.md  # Dated archive of each synthesis run.
 │   └── crm.json                # Network layer contacts and conversation history.
 ├── scripts/                    # One script per layer. Each script defines its own load pattern.
 └── sprints/                    # Sprint card history. One file per week.
@@ -26,6 +31,8 @@ Selective Context Loading — Per Task
 Each script or session loads only what it needs. No session loads everything.
 Task
 Files Loaded
+Orientation (Layer 0)
+CLAUDE.md + layer0_signals.json + layer1_digest + layer2_digest
 Weekly synthesis (Layer 3)
 CLAUDE.md + layer1_digest + layer2_digest + last 14 journal entries + journal_summary
 Layer 1 scrape + process
@@ -69,9 +76,12 @@ Template 3 (opening prompt for new chat):
 
 Scheduling
 Automated runs are handled via GitHub Actions in .github/workflows/ — not local cron.
+  layer0.yml  — Monthly cron: 1st of every month at 8am UTC (also triggerable manually via workflow_dispatch)
   layer1.yml  — Every Monday 6am UTC  (Layer 1 scrape + process)
   layer2.yml  — 1st of month 7am UTC  (Layer 2 scrape + process)
   layer3.yml  — Every Tuesday 8am UTC (Layer 3 synthesis, full profile fetch)
+  layer4.yml  — Every Tuesday 11am UTC (Layer 4 sprint card generation)
+  layer5.yml  — Manual trigger only (workflow_dispatch; Decision #19)
   layer6.yml  — 1st of month 11pm UTC (Layer 6 journal compression)
 All workflows commit changed files in data/summaries/ and data/logs/ back to the repo.
 data/raw/ is ephemeral per run and never committed.
@@ -104,11 +114,14 @@ AI displacement risk assessments by role category
 
 Outputs
 Career space map: 6-8 distinct paths that fit Roman's profile
-Each path scored on: viability, 5-year trajectory, AI displacement risk, autonomy ceiling, FIRE alignment
+Each path scored on: viability, 5-year trajectory, AI displacement risk, autonomy ceiling, long-term financial alignment
 Honest assessment of where RevOps/GTM sits in the landscape
 
+Implementation note
+Three-step pipeline: (1) data collection → data/raw/layer0_raw.json, (2) compression via Sonnet → data/summaries/layer0_signals.json (structured JSON; prevents raw data from entering Opus context), (3) synthesis via Opus → layer0_orientation.md. This matches the same compress-then-synthesize pattern as Layers 1 and 2.
+
 Cadence
-Runs quarterly. Conclusions from 6 months ago may already be stale — this layer never assumes its prior output is still correct.
+Runs monthly. Conclusions from even 30 days ago may already be stale — this layer never assumes its prior output is still correct.
 
 LAYER 1  |  MARKET SIGNAL MODULE
 
@@ -130,6 +143,8 @@ YC batch announcements — new company descriptions reveal emerging job function
 VC portfolio pages and investment thesis announcements — a new Bessemer or a16z thesis becomes 50 job descriptions in 18 months
 Conference talk titles at Dreamforce, SaaStr Annual, RevGenius Summit — whoever is being invited to speak signals what the market is about to care about
 LinkedIn creator velocity — when someone goes from 2K to 40K followers in 8 months on a specific topic, that topic is inflecting
+
+Implementation status (as of 2026-03-10): Track B continuous monitoring is not yet implemented in layer1.py. Layer 0 partially covers this function quarterly (RSS from Lenny, SaaStr, a16z, BvP; YC batch data). The distinction: Layer 0 asks "should the direction change?"; Track B asks "what's about to appear in postings that doesn't yet?" Continuous Track B is a future Layer 1 enhancement.
 
 Emerging role watcher
 A specific sub-question the Orientation Layer should ask every quarter: what function is being performed informally at high-growth companies right now that will become a named role in 18-24 months? Historically: RevOps itself, Growth Engineering, AI Ops. The person who does the job before it has a name owns the narrative when the title appears. The system should always be scanning for the next one.
@@ -167,7 +182,7 @@ Key questions it answers
 What is the intersection of market demand (Layer 1) and proven paths (Layer 2)? That intersection is the learning priority queue.
 What's the delta between what job postings ask for and what people who actually got hired have?
 Which companies appear in both job postings AND career path profiles? Those are the highest-conviction targets.
-Given Roman's specific background — CS, CAUHEC outbound ops, Donaldson RevOps — what's the narrative that makes this combination sound intentional?
+Given the user's specific background — CS, early-stage GTM ops, confirmed RevOps internship — what's the narrative that makes this combination sound intentional?
 What should Roman stop doing because it no longer matters?
 Where is Roman under-positioned relative to his actual capability?
 
@@ -193,6 +208,7 @@ One positioning reminder — one sentence describing how to present yourself thi
 
 Running portfolio brief
 A living document that updates automatically as projects and learning milestones are logged. Always reflects current best positioning. Ready to paste into a resume or LinkedIn at any moment.
+Not yet implemented (as of 2026-03-10). Sprint cards are generated; auto-updating portfolio brief is a future Layer 4 enhancement.
 
 Public compounding thread
 The portfolio layer has two modes: private proof of work (for applications) and public compounding (for inbound). Inbound beats outbound in career development the same way it does in sales. The system should always be asking: what could Roman write, post, or build publicly such that the right people come to him?
@@ -228,6 +244,11 @@ Flags when a contact posts something relevant to Roman's current direction
 Reminds Roman to convert good conversations into coffee chats
 The network is a living asset that needs maintenance. The system handles the memory.
 
+Implementation notes (as of 2026-03-10):
+- CRM skip logic: if a contact slug already exists in data/crm.json, Layer 5 skips re-drafting. Prevents duplicate Apify + Claude calls on existing contacts.
+- MISSING URL handoff: Layer 4 outputs "MISSING" when a contact's LinkedIn URL is unknown. Layer 5 detects this, runs a LinkedIn profile search to resolve it, then proceeds — or flags the contact in the digest email if search returns nothing. This allows Layer 4 to generate sprint cards without blocking on URL lookup. See Decision Log #22.
+- Follow-up prompting (surfaces people not followed up with, flags relevant posts, coffee chat reminders) is currently manual — Roman reads the CRM and decides. These are planned enhancements.
+
 LAYER 6  |  FEEDBACK LOOP
 
 Purpose
@@ -245,3 +266,7 @@ Skill investment vs. market signal alignment: if Roman is spending time on somet
 
 The compounding effect
 Six months from now, this system has watched Roman develop in real time, tracked the market in real time, and accumulated a log of every outreach conversation and outcome. The synthesis it produces is no longer drawing only on external data — it's drawing on Roman's history. That's something no career coach, course, or generic AI tool can replicate.
+
+Decision Log
+**21** — Drop Levels.fyi from Layer 0 — JS-rendered, not scrapeable via requests; static fallback rejected because hardcoded assumptions are not signals.
+**22** — MISSING URL placeholder pattern (Layer 4 → Layer 5 handoff) — Layer 4 outputs "MISSING" for unknown LinkedIn URLs rather than blocking sprint card generation. Layer 5 resolves via profile search at runtime. This keeps the Layer 4 → Layer 5 pipeline non-blocking and separates the concern of URL discovery from sprint card production.

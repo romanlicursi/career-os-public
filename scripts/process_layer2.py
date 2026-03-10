@@ -155,11 +155,11 @@ Extraction rules:
   non-traditional background, or anyone with an unusual combination of prior roles.
 - For time_to_target: count from the first full-time role after education to the
   first occurrence of a target-type role (Strategy & Ops, Growth Ops, RevOps, GTM).
-- For roman_assessment: Roman is a 21-year-old CS junior at UW-Madison with
-  real-world outbound ops experience at a healthcare nonprofit, a confirmed Revenue
-  Operations internship at Donaldson (summer 2026), and is currently building a
-  career intelligence system using AI and Python. He is NOT pursuing a default SWE
-  path. He is optimizing for autonomy, high leverage, and FIRE alignment.\
+- For roman_assessment: User is a CS student with real-world outbound ops experience
+  at an early-stage org, a confirmed Revenue Operations internship at a mid-market
+  industrial company (next summer), and is building a career intelligence system
+  using AI and Python. NOT pursuing a default SWE path. Optimizing for autonomy,
+  high leverage, and long-term financial independence.\
 """
 
 

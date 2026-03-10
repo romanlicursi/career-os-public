@@ -50,11 +50,11 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-          username: romanlicursi@gmail.com
+          username: ${{ secrets.GMAIL_USER }}
           password: ${{ secrets.GMAIL_APP_PASSWORD }}
           subject: "Career OS — Layer 1 complete ${{ github.run_id && '✓' || '' }} $(date +%Y-%m-%d)"
-          to: romanlicursi@gmail.com
-          from: Career OS <romanlicursi@gmail.com>
+          to: ${{ secrets.GMAIL_USER }}
+          from: Career OS <${{ secrets.GMAIL_USER }}>
           body: |
             Layer 1 (Market Signal) completed — $(date +%Y-%m-%d)
 

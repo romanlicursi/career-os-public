@@ -44,11 +44,11 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-          username: romanlicursi@gmail.com
+          username: ${{ secrets.GMAIL_USER }}
           password: ${{ secrets.GMAIL_APP_PASSWORD }}
           subject: "Career OS — Journal compressed $(date +%Y-%m-%d)"
-          to: romanlicursi@gmail.com
-          from: Career OS <romanlicursi@gmail.com>
+          to: ${{ secrets.GMAIL_USER }}
+          from: Career OS <${{ secrets.GMAIL_USER }}>
           body: |
             Layer 6 (Journal Compression) completed — $(date +%Y-%m-%d)
 

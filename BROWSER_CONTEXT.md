@@ -2,8 +2,8 @@ BROWSER_CONTEXT.md
 Career OS — Bridge File for claude.ai Sessions Last updated: March 2026
 
 Section 1: Project Snapshot
-What this is: Career OS is a six-layer intelligence and action system built in Claude Code. It scrapes and synthesizes job market data, maps real career paths, generates weekly sprint cards, and produces targeted outreach — all filtered through Roman's Decision Constitution.
-Who it's for: Roman Licursi. 21, CS junior at UW-Madison. Gap semester in Prague through late April 2026. Confirmed RevOps internship at Donaldson, summer 2026. Real GTM ops experience via CAUHEC Connect. Optimizing for: FIRE, high autonomy, high-leverage work, career capital that compounds. Not optimizing for: prestige, bureaucracy, AI-replaceable tasks, generic paths.
+What this is: Career OS is a six-layer intelligence and action system built in Claude Code. It scrapes and synthesizes job market data, maps real career paths, generates weekly sprint cards, and produces targeted outreach — all filtered through a personal Decision Constitution.
+Who it's for: A CS student with hands-on GTM/RevOps experience. [See CLAUDE.md for full profile context.] Optimizing for: high autonomy, high-leverage work, career capital that compounds. Not optimizing for: prestige, bureaucracy, AI-replaceable tasks, generic paths.
 Strategic identity: Someone who builds and improves the systems that make revenue, growth, and operations work — combining technical depth, business judgment, and AI leverage to create measurable impact.
 Tools in use: Claude Code (primary build environment), claude.ai (strategic sessions), Apify (scraping), BROWSER_CONTEXT.md (cross-session bridge).
 The meta-point: Building this system is itself the portfolio piece. A partially-built, well-documented Career OS is already career capital.
@@ -49,7 +49,7 @@ Single actor returns full career history in one pass, PAY_PER_EVENT pricing work
 Drop education data from Layer 2 scraping
 Layer 2 extractions are career-move based; education adds noise without answering any core questions
 13
-Automated Roman's profile input via Apify scraper (harvestapi/linkedin-profile-scraper)
+Automated user profile input via Apify scraper (harvestapi/linkedin-profile-scraper)
 Fully automated, $0.004/run, captures all LinkedIn sections including projects and posts; validated March 10 2026
 14
 Automation runs on GitHub Actions, not local cron
@@ -69,17 +69,20 @@ Same actor as Roman's own profile fetch, confirmed working, takes URL directly; 
 19
 Layer 5 is manual trigger only
 Outreach targeting requires Roman's review of sprint card before drafts are generated; highest quality bar in the system
+20
+Layer 5 search query fix: [Find: Role at Company] stubs now search "Role Company" not just "Company"
+Searching by company alone returned random people; role+company targets the right profile type
 
 
 Section 3: Current State
 Last updated: March 10, 2026
 
 Current State:
-- Layer 5 (Network Intelligence) fully built — scrapes contacts via harvestapi/linkedin-profile-scraper, generates dossiers, drafts LinkedIn DM + email + 10-day follow-up per contact, updates crm.json, emails combined weekly digest to romanlicursi@gmail.com
+- Layer 5 (Network Intelligence) fully built — scrapes contacts via harvestapi/linkedin-profile-scraper, generates dossiers, drafts LinkedIn DM + email + 10-day follow-up per contact, updates crm.json, emails combined weekly digest to configured GMAIL recipient
 - Layer 4 rebuilt as script (layer4.py) with correct stub format (name | role | company | MISSING | rationale); LinkedIn URL discovery via harvestapi/linkedin-profile-search when MISSING; [Find: Role at Company] fallback for unknowns
 - Tuesday flow locked: Layer 3 at 8am UTC → Layer 4 at 11am UTC → Layer 5 manual trigger → single combined Weekly Digest email
 - All six layers designed; Layers 1–6 fully built and committed to GitHub
 
 Next steps:
-- Update current sprint card targets to name | role | company | linkedin_url | rationale format, then trigger Layer 5 from GitHub Actions to validate end-to-end
-- Add GMAIL_APP_PASSWORD secret to GitHub repo if not yet active
+- Add GMAIL_APP_PASSWORD secret to GitHub repo to enable digest email delivery
+- Layer 5 validated locally (March 10 2026) — 3 contacts processed, CRM populated, email skipped (no Gmail secret)

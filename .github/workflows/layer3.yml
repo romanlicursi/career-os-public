@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Fetch Roman's LinkedIn profile + run synthesis
+      - name: Fetch LinkedIn profile + run synthesis
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           APIFY_API_TOKEN: ${{ secrets.APIFY_API_KEY }}
@@ -57,9 +57,9 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-          username: romanlicursi@gmail.com
+          username: ${{ secrets.GMAIL_USER }}
           password: ${{ secrets.GMAIL_APP_PASSWORD }}
           subject: "Career OS — Weekly Synthesis Memo $(date +%Y-%m-%d)"
-          to: romanlicursi@gmail.com
-          from: Career OS <romanlicursi@gmail.com>
+          to: ${{ secrets.GMAIL_USER }}
+          from: Career OS <${{ secrets.GMAIL_USER }}>
           body: ${{ steps.memo.outputs.MEMO_CONTENT }}

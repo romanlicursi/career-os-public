@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "collected_at": "2026-03-10",
+    "sources_successful": [
+      "lenny",
+      "saastr"
+    ]
+  },
+  "emerging_titles": [
+    {
+      "title": "AI SDR",
+      "source": "saastr",
+      "count": 1,
+      "notes": "Referenced as a deployable GTM function replacing human SDRs; SaaStr post discusses brand requirements for AI SDR performance, signaling this is an operational role category being evaluated at scale"
+    },
+    {
+      "title": "AI Agent Operator / AI Agent Manager",
+      "source": "saastr",
+      "count": 2,
+      "notes": "SaaStr describes running 20+ AI agents as an operational discipline with measurable ROI; implies an emerging function for managing fleets of GTM-adjacent agents"
+    }
+  ],
+  "title_mutations": [
+    {
+      "from": "SDR",
+      "to": "AI SDR",
+      "signal_strength": "moderate"
+    },
+    {
+      "from": "Sales Ops",
+      "to": "AI Agent Operator",
+      "signal_strength": "weak"
+    }
+  ],
+  "skill_bundles": [
+    {
+      "skills": [
+        "AI agent orchestration",
+        "prompt engineering",
+        "GTM workflow automation"
+      ],
+      "context": "SaaStr describes managing 20+ AI agents across sales and ops functions, with compounding advantage for teams with 12+ months of agent experience",
+      "source": "saastr"
+    },
+    {
+      "skills": [
+        "B2B positioning",
+        "ICP definition",
+        "messaging strategy"
+      ],
+      "context": "Lenny post on advanced B2B positioning covering lessons from 300 companies over 10 years \u2014 directly applicable to GTM strategy roles",
+      "source": "lenny"
+    },
+    {
+      "skills": [
+        "AI SDR deployment",
+        "brand signal analysis",
+        "outbound sequencing"
+      ],
+      "context": "SaaStr post analyzing what makes AI SDRs work, highlighting brand strength as a variable in AI-driven outbound performance",
+      "source": "saastr"
+    },
+    {
+      "skills": [
+        "vibe coding",
+        "custom internal tooling",
+        "no-code/low-code app building"
+      ],
+      "context": "SaaStr describes building N=1 internal apps via vibe coding that outperform bought software for specific GTM use cases \u2014 emerging skill for ops practitioners who can build their own tooling",
+      "source": "saastr"
+    }
+  ],
+  "vc_thesis_themes": [],
+  "yc_signals": []
+}

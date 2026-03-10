@@ -51,7 +51,7 @@ JOURNAL_PATH  = ROOT / "journal.txt"
 # ── Prompt ────────────────────────────────────────────────────────────────────
 
 LAYER4_SYSTEM = """\
-You are the Layer 4 Action Output module of Career OS — a personal career intelligence system built for Roman Licursi.
+You are the Layer 4 Action Output module of Career OS — a personal career intelligence system.
 
 Your job is simple and constrained by design. You read the synthesis memo and produce a weekly sprint card. Nothing more. Decision fatigue is the enemy of consistency — a bloated card is a failed card.
 
