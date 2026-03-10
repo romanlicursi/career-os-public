@@ -1,0 +1,67 @@
+name: Layer 2 — Career Path Data
+
+on:
+  schedule:
+    - cron: '0 7 1 * *'   # 1st of every month at 7am UTC
+  workflow_dispatch:        # Allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Scrape career profiles
+        env:
+          APIFY_API_TOKEN: ${{ secrets.APIFY_API_KEY }}
+        run: |
+          mkdir -p data/logs
+          python3 scripts/scrape_layer2.py 2>&1 | tee data/logs/layer2-$(date +%Y-%m-%d).log
+
+      - name: Process profiles → digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python3 scripts/process_layer2.py 2>&1 | tee -a data/logs/layer2-$(date +%Y-%m-%d).log
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/summaries/layer2_digest.json data/logs/
+          git diff --staged --quiet || git commit -m "Layer 2 run $(date +%Y-%m-%d)"
+          git push
+
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.GMAIL_USER }}
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: "Career OS — Layer 2 complete $(date +%Y-%m-%d)"
+          to: ${{ secrets.GMAIL_USER }}
+          from: Career OS <${{ secrets.GMAIL_USER }}>
+          body: |
+            Layer 2 (Career Path Data) completed — $(date +%Y-%m-%d)
+
+            ~32 LinkedIn career profiles scraped and processed. layer2_digest.json updated.
+
+            View the updated digest:
+            https://github.com/${{ github.repository }}/blob/main/data/summaries/layer2_digest.json
+
+            Run log:
+            https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}

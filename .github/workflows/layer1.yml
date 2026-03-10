@@ -1,0 +1,67 @@
+name: Layer 1 — Market Signal
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # Every Monday at 6am UTC
+  workflow_dispatch:        # Allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Scrape job postings
+        env:
+          APIFY_API_TOKEN: ${{ secrets.APIFY_API_KEY }}
+        run: |
+          mkdir -p data/logs
+          python3 scripts/scrape_layer1.py 2>&1 | tee data/logs/layer1-$(date +%Y-%m-%d).log
+
+      - name: Process postings → digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python3 scripts/process_layer1.py 2>&1 | tee -a data/logs/layer1-$(date +%Y-%m-%d).log
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/summaries/layer1_digest.json data/logs/
+          git diff --staged --quiet || git commit -m "Layer 1 run $(date +%Y-%m-%d)"
+          git push
+
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.GMAIL_USER }}
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: "Career OS — Layer 1 complete ${{ github.run_id && '✓' || '' }} $(date +%Y-%m-%d)"
+          to: ${{ secrets.GMAIL_USER }}
+          from: Career OS <${{ secrets.GMAIL_USER }}>
+          body: |
+            Layer 1 (Market Signal) completed — $(date +%Y-%m-%d)
+
+            50 job postings scraped and processed. layer1_digest.json updated.
+
+            View the updated digest:
+            https://github.com/${{ github.repository }}/blob/main/data/summaries/layer1_digest.json
+
+            Run log:
+            https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}

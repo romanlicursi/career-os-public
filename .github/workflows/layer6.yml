@@ -1,0 +1,58 @@
+name: Layer 6 — Journal Compression
+
+on:
+  schedule:
+    - cron: '0 23 1 * *'   # 1st of every month at 11pm UTC
+  workflow_dispatch:         # Allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Compress journal
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          mkdir -p data/logs data/raw/journal_archive
+          python3 scripts/compress_journal.py 2>&1 | tee data/logs/layer6-$(date +%Y-%m-%d).log
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add journal_summary.txt journal.txt data/logs/
+          git diff --staged --quiet || git commit -m "Layer 6 journal compression $(date +%Y-%m-%d)"
+          git push
+
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.GMAIL_USER }}
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: "Career OS — Journal compressed $(date +%Y-%m-%d)"
+          to: ${{ secrets.GMAIL_USER }}
+          from: Career OS <${{ secrets.GMAIL_USER }}>
+          body: |
+            Layer 6 (Journal Compression) completed — $(date +%Y-%m-%d)
+
+            Old journal entries compressed into journal_summary.txt.
+
+            Run log:
+            https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}

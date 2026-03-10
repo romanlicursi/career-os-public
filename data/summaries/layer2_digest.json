@@ -1,0 +1,417 @@
+{
+  "meta": {
+    "last_updated": "2026-03-10",
+    "total_profiles_processed": 32,
+    "run_dates": [
+      "2026-03-10"
+    ]
+  },
+  "cohort_clusters": [
+    {
+      "name": "Consulting-to-Strategy-Ops",
+      "description": "Professionals who built analytical and project management foundations at consulting firms before transitioning into strategy and operations roles. The consulting stint provided frameworks, client exposure, and cross-industry pattern recognition.",
+      "defining_moves": [
+        "Senior Consultant at SunGard \u2192 Manager \u2192 Technology Leader at Enterprise Products",
+        "Intern at PwC \u2192 Associate Deals \u2192 Senior Associate Deals Strategy and Operations"
+      ],
+      "profile_count": 2
+    },
+    {
+      "name": "Project-Manager-to-Growth-Ops",
+      "description": "Individuals who climbed the project management ladder \u2014 often in tech-adjacent or IT services firms \u2014 and pivoted into growth and operations leadership as companies scaled.",
+      "defining_moves": [
+        "Senior Business Analyst \u2192 Project Manager \u2192 Senior PM \u2192 Director of Operations \u2192 Head of Growth & Strategy \u2192 VP of Growth & Operations"
+      ],
+      "profile_count": 1
+    },
+    {
+      "name": "Single-Company-Lifer-Ops",
+      "description": "Professionals who stayed at one organization for most of their career, accumulating operational depth and titles through tenure rather than lateral moves.",
+      "defining_moves": [
+        "Associate Bursar 31 years at Weber State",
+        "Director of Catering \u2192 VP \u2192 SVP \u2192 CEO at TungLok Group 27 years"
+      ],
+      "profile_count": 2
+    },
+    {
+      "name": "Fragmented-Hustle-Ops",
+      "description": "Individuals with highly fragmented, overlapping, or non-traditional role histories \u2014 often Web3, crypto, or contractor roles \u2014 who claim ops or growth titles without a coherent institutional path.",
+      "defining_moves": [
+        "Data Entry Analyst \u2192 Sales Rep \u2192 CMO \u2192 CEO \u2192 Operations Manager at xDeltaGrowth (all overlapping)"
+      ],
+      "profile_count": 2
+    },
+    {
+      "name": "Traditional Sales Ladder to Ops/GTM",
+      "description": "Professionals who climbed a conventional sales or account management hierarchy over many years before transitioning into operations or GTM strategy roles. The ops title often came after 8-15 years of sales experience.",
+      "defining_moves": [
+        "Senior Sales Manager \u2192 Director of Sales \u2192 VP/Head of Ops or Commercial",
+        "Account Executive \u2192 Account Director \u2192 Sr. Director \u2192 VP Sales/GTM"
+      ],
+      "profile_count": 3
+    },
+    {
+      "name": "Founder-First GTM",
+      "description": "Individuals who launched their own ventures early, often with minimal prior corporate experience, and used the founder credential to position themselves in GTM, growth, or ops advisory roles.",
+      "defining_moves": [
+        "Early-stage founding \u2192 GTM consulting/advisory",
+        "Founder of multiple simultaneous ventures \u2192 Growth/Ops title"
+      ],
+      "profile_count": 2
+    },
+    {
+      "name": "Technical/Project Operations Escalation",
+      "description": "Professionals who entered via project management, technical consulting, or customer success operations and systematically moved into senior growth or partner operations roles at mid-size tech companies.",
+      "defining_moves": [
+        "Project Manager \u2192 Business Operations Consultant \u2192 Manager Customer Success Ops \u2192 Senior Manager Global Partner Ops \u2192 VP Growth & Operations"
+      ],
+      "profile_count": 2
+    },
+    {
+      "name": "Industry Domain Expert to Ops Leadership",
+      "description": "Executives who built deep domain expertise in a specific vertical (healthcare, food & beverage) over a decade and leveraged that to move into central or commercial operations leadership.",
+      "defining_moves": [
+        "Market Leader/Director in vertical \u2192 Executive Director \u2192 Chief Officer \u2192 Founder of ops-adjacent company",
+        "Trading Manager \u2192 Head of Trading \u2192 Head of Commercial \u2192 Head of Central Operations"
+      ],
+      "profile_count": 2
+    },
+    {
+      "name": "Single-Company Career Builder",
+      "description": "Rare path: staying at one employer for an extended period and accumulating enough internal capital to move from individual contributor to senior ops or sales leadership without lateral job-hopping.",
+      "defining_moves": [
+        "Production Trainer \u2192 Assistant to VP \u2192 Director of Tournament Operations \u2192 National Sales Manager \u2192 Regional Sales Rep (26+ years at PING)"
+      ],
+      "profile_count": 1
+    },
+    {
+      "name": "Freelance GTM Builder",
+      "description": "Individuals who assembled GTM/RevOps skills through freelance work, consulting, and short contract stints rather than a linear corporate path. They often have a patchwork of roles across geographies and industries before landing a named GTM or RevOps title.",
+      "defining_moves": [
+        "Freelancer/consultant \u2192 GTM Advisor \u2192 GTM Engineer",
+        "Multiple overlapping roles simultaneously"
+      ],
+      "profile_count": 2
+    },
+    {
+      "name": "Technical Founder to Ops Leader",
+      "description": "People who started as software developers or engineers, founded or co-founded a company, then transitioned into formal operations or C-suite ops roles (COO, CTO, GTM). The founder stint is the credentialing event.",
+      "defining_moves": [
+        "Software Developer \u2192 Founder \u2192 COO/CTO",
+        "Project Manager \u2192 CEO \u2192 COO"
+      ],
+      "profile_count": 1
+    },
+    {
+      "name": "Senior Sales/CX to Growth Officer",
+      "description": "Veterans of BPO, contact center, or enterprise sales who accumulated VP-level delivery and sales titles before being rebranded as Chief Growth Officers or Business Development VPs at mid-sized firms.",
+      "defining_moves": [
+        "VP Operations \u2192 Chief Sales Officer \u2192 Chief Growth Officer"
+      ],
+      "profile_count": 1
+    },
+    {
+      "name": "Domain Engineer Staying in Lane",
+      "description": "Process controls, facilities, or construction engineers who never cross into strategy or ops in the business sense. Included in batch but do not represent target roles \u2014 they are noise profiles.",
+      "defining_moves": [
+        "Controls Engineer \u2192 Senior Controls Engineer \u2192 Project Engineer"
+      ],
+      "profile_count": 4
+    },
+    {
+      "name": "Technical Recruiter Lateral",
+      "description": "People who moved from software or engineering roles into technical recruiting or people operations, often at staffing firms or fast-scaling startups. Adjacent to RevOps but not a direct path.",
+      "defining_moves": [
+        "Jr. Software Engineer \u2192 US Technical Recruiter \u2192 Senior Technical Specialist",
+        "Technical Recruiter \u2192 Head of People Operations"
+      ],
+      "profile_count": 2
+    },
+    {
+      "name": "Operator-to-GTM Builder",
+      "description": "Professionals who accumulated hands-on marketing, sales, or operations execution experience before pivoting into GTM engineering or systems-building roles. Often self-taught or founder-adjacent.",
+      "defining_moves": [
+        "Owner/freelance marketing \u2192 CMO \u2192 Marketing Engineer",
+        "BDR/cold-calling \u2192 Business Development \u2192 GTM Engineer"
+      ],
+      "profile_count": 2
+    }
+  ],
+  "bridge_moves": {
+    "consultant / senior consultant \u2192 strategy & operations": {
+      "from_role": "Consultant / Senior Consultant",
+      "to_role": "Strategy & Operations",
+      "frequency": 2,
+      "notes": "Both Profile 3 and Profile 8 spent multiple years in consulting (Capco/SunGard and PwC respectively) before moving into ops-adjacent or strategy roles. The pattern: consulting gives you structured problem-solving credibility and client-facing reps that translate directly into ops framing."
+    },
+    "project manager \u2192 director / head of operations": {
+      "from_role": "Project Manager",
+      "to_role": "Director / Head of Operations",
+      "frequency": 2,
+      "notes": "Profile 9 moved from PM roles at IT services firms to Director of Operations and eventually VP of Growth. The transition worked because PM roles at mid-size tech firms force cross-functional coordination \u2014 a core ops skill \u2014 without requiring a formal ops title first."
+    },
+    "sales manager / account executive \u2192 director of sales / sales director": {
+      "from_role": "Sales Manager / Account Executive",
+      "to_role": "Director of Sales / Sales Director",
+      "frequency": 4,
+      "notes": "The most common transition in this batch. Appeared at staffing firms (Aerotek), SaaS (Secureframe, Applause), and services companies. Timing ranged from 1-3 years in the AE seat before promotion. Company growth stage mattered \u2014 faster at early-stage SaaS."
+    },
+    "director / head of sales \u2192 vp of sales or commercial ops / head of operations": {
+      "from_role": "Director / Head of Sales",
+      "to_role": "VP of Sales or Commercial Ops / Head of Operations",
+      "frequency": 3,
+      "notes": "The bridge from sales director to a VP or Head of Ops/Commercial role required either a company transition or an internal restructuring event. Profiles 1, 2, and 7 all show this pattern, usually after 2-4 years at the Director level."
+    },
+    "project manager / business operations consultant \u2192 customer success ops / partner operations manager": {
+      "from_role": "Project Manager / Business Operations Consultant",
+      "to_role": "Customer Success Ops / Partner Operations Manager",
+      "frequency": 2,
+      "notes": "Profile 5 shows this clearly: PM at a tech services firm \u2192 Business Ops Consultant \u2192 Manager of Customer Success Ops at a SaaS company. The unlock was moving from services/consulting into a product-adjacent SaaS company where ops roles are more formalized."
+    },
+    "founder / owner \u2192 growth ops / gtm advisory / vp growth": {
+      "from_role": "Founder / Owner",
+      "to_role": "Growth Ops / GTM Advisory / VP Growth",
+      "frequency": 2,
+      "notes": "Profiles 3 and 4 both used founding credentials to pivot into advisory or growth analyst roles. The founding experience served as a substitute for formal ops tenure, though both profiles show the target roles were relatively junior or self-directed."
+    },
+    "freelance consultant / independent contractor \u2192 gtm engineer / revops specialist": {
+      "from_role": "Freelance Consultant / Independent Contractor",
+      "to_role": "GTM Engineer / RevOps Specialist",
+      "frequency": 2,
+      "notes": "Both Profile 1 and Profile 6 used freelance consulting as the on-ramp to named GTM/RevOps titles. The pattern: build a portfolio of 'systems built' or 'clients served,' then convert that into a formal title at a small firm or self-owned shop. Works best when you can point to specific tools (Clay, HubSpot, Apollo) and quantified outcomes."
+    },
+    "software developer / engineer \u2192 project manager / founder": {
+      "from_role": "Software Developer / Engineer",
+      "to_role": "Project Manager / Founder",
+      "frequency": 2,
+      "notes": "Profile 3 and Profile 9 both moved from hands-on technical roles into management or business-side functions. The trigger was either founding a company or joining a staffing/consulting firm where business development was required. Technical credibility was the entry ticket, not an ops pedigree."
+    },
+    "analyst / intern at large firm \u2192 gtm or revops role at startup": {
+      "from_role": "Analyst / Intern at large firm",
+      "to_role": "GTM or RevOps role at startup",
+      "frequency": 2,
+      "notes": "Profile 1 (Capgemini analyst \u2192 GTM) and Profile 9 (Wipro intern \u2192 technical recruiter) both used a large firm internship or analyst stint as a credentialing step before pivoting hard into a different function at a smaller company. The large firm name buys legitimacy; the pivot happens fast after."
+    },
+    "business development / sales execution \u2192 gtm engineer": {
+      "from_role": "Business Development / Sales Execution",
+      "to_role": "GTM Engineer",
+      "frequency": 2,
+      "notes": "Both profiles show hands-on outbound or BD work (cold-calling, appointment setting, client relationships) as a direct precursor to GTM engineering. The transition works because GTM engineering requires deep intuition about pipeline mechanics that only comes from doing the work manually first."
+    },
+    "marketing / operations generalist \u2192 gtm engineer or marketing engineer": {
+      "from_role": "Marketing / Operations generalist",
+      "to_role": "GTM Engineer or Marketing Engineer",
+      "frequency": 2,
+      "notes": "Both profiles evolved from broad execution roles (marketing officer, customer service, GM) into systems-oriented GTM titles. The pattern suggests that breadth of operational exposure \u2014 not depth in one function \u2014 is what enables the jump."
+    }
+  },
+  "launchpad_companies": {
+    "pwc deutschland": {
+      "display_name": "PwC Deutschland",
+      "count": 1,
+      "titles_launched_from": [
+        "Intern | Valuation & Strategy",
+        "Associate | Deals | EDGE Graduate Programme"
+      ],
+      "why_launchpad": "PwC's structured graduate programmes (like EDGE) provide a formal on-ramp into deals strategy and operations with institutional credibility that accelerates promotion to Senior Associate within 2 years."
+    },
+    "capco": {
+      "display_name": "Capco",
+      "count": 1,
+      "titles_launched_from": [
+        "Senior Consultant",
+        "Principal Consultant"
+      ],
+      "why_launchpad": "Capco embeds consultants at major enterprises (Freddie Mac, energy cos), giving them real operational and data architecture exposure that reads as industry experience rather than pure consulting on a resume."
+    },
+    "aerotek": {
+      "display_name": "Aerotek",
+      "count": 1,
+      "titles_launched_from": [
+        "Senior Recruiter",
+        "Senior Account Executive",
+        "Sr. Sales Manager"
+      ],
+      "why_launchpad": "Aerotek's staffing model forces early reps into high-volume outbound and quota environments that compress sales skill development, making it a credible launchpad for Director-level sales roles at tech or services companies within 3 years."
+    },
+    "applause": {
+      "display_name": "Applause",
+      "count": 1,
+      "titles_launched_from": [
+        "AE & Enterprise Sales Team Manager",
+        "Regional Director of Sales APAC & IL"
+      ],
+      "why_launchpad": "Applause gave Profile 8 the multi-region enterprise sales management experience (APAC, EMEA) needed to step into a Group Director role at a higher-profile company like JFrog \u2014 cross-regional scope is the key credential."
+    },
+    "pizzaexpress": {
+      "display_name": "PizzaExpress",
+      "count": 1,
+      "titles_launched_from": [
+        "Trading Manager",
+        "Senior Trading Manager",
+        "Head of Channel Execution"
+      ],
+      "why_launchpad": "PizzaExpress provided a structured internal promotion track in commercial and trading functions that translated directly into Head of Commercial and Head of Operations roles at comparable consumer brands."
+    },
+    "capgemini": {
+      "display_name": "Capgemini",
+      "count": 1,
+      "titles_launched_from": [
+        "Intern",
+        "Analyst"
+      ],
+      "why_launchpad": "Provides a globally recognized consulting/tech brand on the resume that signals analytical competence, enabling a hard pivot into GTM or ops roles at smaller companies where that pedigree over-indexes."
+    },
+    "wipro": {
+      "display_name": "Wipro",
+      "count": 1,
+      "titles_launched_from": [
+        "Jr. Software Engineer (Intern)"
+      ],
+      "why_launchpad": "Similar to Capgemini \u2014 a large Indian IT firm whose name is recognized in US/Canada staffing and tech markets, giving career-changers a credible anchor point before pivoting functions."
+    },
+    "self-owned consulting / freelance practice": {
+      "display_name": "Self-owned consulting / freelance practice",
+      "count": 1,
+      "titles_launched_from": [
+        "Owner",
+        "Freelancer",
+        "GTM/RevOps Specialist"
+      ],
+      "why_launchpad": "Appearing in 2 of the 3 genuine GTM/RevOps profiles, running your own consulting shop lets you stack client logos, tool expertise, and outcome metrics that substitute for tenure at a named employer \u2014 especially in GTM Engineering where the stack (Clay, Apollo, HubSpot) matters more than the org chart."
+    },
+    "studyingermany.lk (pvt) ltd": {
+      "display_name": "Studyingermany.lk (Pvt) Ltd",
+      "count": 1,
+      "titles_launched_from": [
+        "Customer Relationship Associate",
+        "Head of Sales and Operations"
+      ],
+      "why_launchpad": "Provided rapid internal advancement from IC to leadership within months, compressing the experience curve and building cross-functional credibility fast enough to justify a GTM engineering title externally."
+    }
+  },
+  "anomalies": [
+    {
+      "description": "Profile 9 reached VP of Growth & Operations after starting as a Senior Business Analyst at a legal services firm \u2014 no elite school, no consulting brand, no obvious accelerant.",
+      "what_they_did_differently": "Spent 6 years in a BA role building deep domain knowledge, then systematically climbed PM titles at progressively larger tech firms, arriving at Director of Ops and Head of Growth through demonstrated delivery rather than credential signaling."
+    },
+    {
+      "description": "Profile 8 went from intern to Senior Associate at PwC Deals in under 4 years, which is fast for a European consulting track.",
+      "what_they_did_differently": "Completed a structured graduate programme (EDGE Deals) designed specifically as a fast-track \u2014 the programme itself was the accelerant, not a lateral move or unusual background."
+    },
+    {
+      "description": "Profile 7 lists 30+ concurrent or overlapping roles across Web3 projects, claiming ops and growth titles with no coherent institutional throughline.",
+      "what_they_did_differently": "Used Web3's low barrier to title inflation to accumulate brand-name logos (Chainlink, Cosmos) as ambassador or community roles, then framed these as ops and business development experience \u2014 a pattern that works in crypto circles but would not translate to institutional ops hiring."
+    },
+    {
+      "description": "Profile 8 went from IDF Major (military, no corporate background) to Director of Operations at a fintech firm to Sales Director to VP-level enterprise sales leadership at JFrog \u2014 entirely skipping a traditional entry-level sales path.",
+      "what_they_did_differently": "Used military leadership credentials to enter directly at Director of Operations, then treated that as a pivot into sales leadership rather than staying in ops. The IDF-to-Israel-tech pipeline is a structural shortcut unavailable in most markets."
+    },
+    {
+      "description": "Profile 6 spent 35+ years at a single company (PING) starting from Production Trainer and never left \u2014 reaching senior regional sales and national sales management without ever switching employers.",
+      "what_they_did_differently": "Built entirely internal capital at a brand-loyal company; the lack of external job changes is the anomaly. This path is nearly impossible to replicate in SaaS or startup environments where tenure is measured in months."
+    },
+    {
+      "description": "Profile 3 runs 4+ simultaneous ventures with no clear single employer and positions himself as a GTM founder \u2014 but has no verifiable ops track record at a named company outside of a brief 8-month sales manager role.",
+      "what_they_did_differently": "Used the founder label as a GTM credential without a traditional ops or sales career foundation. This works only if the ventures produce demonstrable revenue outcomes that can be named in pitches or advisory relationships."
+    },
+    {
+      "description": "Profile 9 moved from a 14-month Business Development and Technical Sales role directly into founding a Growth, Revenue & Risk Advisory consultancy \u2014 skipping any mid-level ops tenure entirely.",
+      "what_they_did_differently": "Leveraged a prior Head of Operations & Risk role at a startup to claim advisory credibility almost immediately after leaving. The key was that the startup role had genuine operational scope (not just a title), giving him enough surface area to consult from."
+    },
+    {
+      "description": "Profile 6 reached Head of Revenue Operations and GTM Engineer titles with no visible prior full-time employment history before founding RevAlign.io \u2014 the entire career history is 2024-present with overlapping contract roles.",
+      "what_they_did_differently": "Skipped the traditional employment ladder entirely by building a self-owned GTM consulting brand (RevAlign.io), accumulating a '100+ GTM systems built' claim, and using that as the credential to land concurrent RevOps and GTM Engineer contracts. No degree, no analyst stint, no BDR role visible \u2014 just tool expertise and client volume."
+    },
+    {
+      "description": "Profile 1 has simultaneous roles across four organizations (C17 Lab, RevGenius, BuyerSight, TAM to Target) while maintaining a freelance practice dating to 2017 \u2014 the career is structured as a portfolio rather than a linear progression.",
+      "what_they_did_differently": "Treated GTM as a skill stack to be assembled in parallel across clients rather than a title to earn sequentially. The financial internship at YES BANK and analyst role at Capgemini suggest a non-GTM origin; the pivot was driven by self-directed skilling in Clay and AI automation, not by a hiring manager's promotion."
+    },
+    {
+      "description": "Profile 3 ran a software company (Cosmonaut Technologies) for 6+ years while simultaneously holding project manager roles at NVISH Solutions, then crossed into a Dubai-based startup as Product Manager, CTO, and then COO in under two years.",
+      "what_they_did_differently": "Used a founder title to skip the mid-level ops ladder entirely \u2014 moved straight from PM to CTO to COO at the same startup by being the most senior technical person willing to take operational ownership. The founder credential was the accelerant."
+    },
+    {
+      "description": "Profile 1 ran their own marketing agency (*mdp marketing) for nearly a decade across two stints before ever holding a formal corporate title, then used that self-built credibility to land a CMO role and eventually rebrand as a 'Marketing Engineer.'",
+      "what_they_did_differently": "Skipped the traditional IC-to-manager ladder entirely by building a client book as a founder, then converted that into executive credibility \u2014 the 'Marketing Engineer' title came 15+ years into the career, not early."
+    },
+    {
+      "description": "Profile 2 reached a GTM Engineer title within roughly 2.5 years of their first professional role, starting from customer service at the British Council in Sri Lanka.",
+      "what_they_did_differently": "Stacked three short, high-activity sales and BD roles in rapid succession across geographies (Sri Lanka, UK, US, Australia), signaling aggressive optionality-seeking and willingness to work across time zones \u2014 which appears to be precisely what an ABM & AI GTM role at a remote-first company rewards."
+    }
+  ],
+  "time_to_target": {
+    "Consulting-to-Strategy-Ops": {
+      "median_years": 4.5,
+      "range": "2-7 years"
+    },
+    "Project-Manager-to-Growth-Ops": {
+      "median_years": 10,
+      "range": "8-12 years"
+    },
+    "Single-Company-Lifer-Ops": {
+      "median_years": 15,
+      "range": "10-20 years"
+    },
+    "Fragmented-Hustle-Ops": {
+      "median_years": null,
+      "range": "Indeterminate \u2014 title inflation without institutional validation"
+    },
+    "Traditional Sales Ladder to Ops/GTM": {
+      "median_years": 10,
+      "range": "8-15 years"
+    },
+    "Founder-First GTM": {
+      "median_years": 3,
+      "range": "1-5 years"
+    },
+    "Technical/Project Operations Escalation": {
+      "median_years": 8,
+      "range": "6-10 years"
+    },
+    "Industry Domain Expert to Ops Leadership": {
+      "median_years": 12,
+      "range": "9-15 years"
+    },
+    "Single-Company Career Builder": {
+      "median_years": 9,
+      "range": "6-15 years"
+    },
+    "Freelance GTM Builder": {
+      "median_years": 3.5,
+      "range": "0-7 years"
+    },
+    "Technical Founder to Ops Leader": {
+      "median_years": 5,
+      "range": "4-7 years"
+    },
+    "Senior Sales/CX to Growth Officer": {
+      "median_years": 12,
+      "range": "8-15 years"
+    },
+    "Operator-to-GTM Builder": {
+      "median_years": 9,
+      "range": "2.5\u201315 years"
+    }
+  },
+  "regrets_and_lessons": [
+    "The Project-Manager-to-Growth-Ops path (Profile 9) took 10+ years because each role was reactive \u2014 waiting for scale to come to them rather than proactively moving to higher-growth companies earlier. Moving to a faster-growing firm at the PM level would have compressed the timeline significantly.",
+    "Staying at one company for decades (Profiles 2, 10) produces deep domain expertise but zero transferable market signal \u2014 titles that sound senior internally don't translate to external leverage without cross-company validation.",
+    "The consulting path (Profiles 3, 8) is the most legible bridge to ops, but it requires choosing the right embedded client type \u2014 data/ops clients beat pure finance clients for building GTM or RevOps-relevant experience.",
+    "Accumulating overlapping advisory and ambassador titles in Web3 (Profile 7) creates the appearance of a portfolio career but produces no compounding institutional credibility \u2014 each role resets to zero rather than building on the last.",
+    "Multiple profiles spent 3-5 years in pure sales roles before discovering that ops and strategy work was more aligned with their actual strengths \u2014 earlier exposure to ops-adjacent work (analytics, process design, tooling) would have accelerated their pivot.",
+    "Founders who went direct to GTM advisory without a named-company ops credential (Profiles 3 and 9) show signs of credibility compression \u2014 their titles are senior but their ability to get hired into a company in a formal ops role is unclear without employer-backed proof of impact.",
+    "The profiles who climbed fastest (Profiles 5 and 8) both made a deliberate move into a SaaS company's ops function early, rather than staying in services or consulting \u2014 the SaaS environment accelerates ops title inflation and scope in ways that services firms do not.",
+    "Staying too long in a single vertical (healthcare, golf, food & beverage) can create deep domain credibility but severely limits optionality \u2014 the transferable ops skills are there but the market often re-prices you as an industry specialist rather than an ops generalist.",
+    "The people who reached GTM/RevOps roles fastest (Profile 6, Profile 1) did not wait for permission \u2014 they built a portfolio of systems and clients under a self-owned brand before any employer gave them the title. Waiting for a company to hand you a RevOps title is the slow path.",
+    "Tool fluency (Clay, HubSpot, Apollo, AI automation) appears to be the actual hiring signal in GTM Engineering roles at sub-1000-person companies \u2014 not MBA, not years of experience. Profile 6 has no visible traditional career history and still landed Head of RevOps.",
+    "The Capgemini/Wipro analyst pattern suggests that even one credible large-firm stint \u2014 even as an intern \u2014 provides enough resume legitimacy to make a hard functional pivot. The brand does work, but only if you leave quickly and pivot decisively.",
+    "Founders who stay in their own company too long without a breakout outcome end up needing to take lateral ops roles at other startups to get back on a legible career track (Profile 3). The founder title accelerates entry but doesn't compound unless the company scales.",
+    "Simultaneous overlapping roles (Profile 1, Profile 6) are increasingly normalized in GTM/RevOps \u2014 holding 2-3 concurrent client relationships or contracts is read as 'in demand' rather than 'unfocused' in this specific function.",
+    "Profile 1 implied lesson: Building a personal brand and client base early (even as a student) can substitute for corporate pedigree, but it takes much longer to convert into a scalable, titled GTM role \u2014 starting technical skilling earlier would have compressed the timeline.",
+    "Profile 2 implied lesson: Short stints across multiple high-activity sales roles is a viable fast path to GTM engineering when paired with a willingness to operate globally, but the lack of depth in any one domain means the GTM Engineer title may be fragile without investing in technical tooling (Clay, AI, CRM automation) to back it up.",
+    "Both profiles suggest: The 'GTM Engineer' title is increasingly accessible to people with operational sales experience who learn to systematize what they already do \u2014 the technical layer is learnable, but the pipeline intuition is the hard part."
+  ],
+  "roman_closest_cluster": "Operator-to-GTM Builder",
+  "roman_gap_analysis": "User's profile most closely mirrors Profile 2's early arc \u2014 outbound execution experience followed by a structured ops internship \u2014 but with a material advantage: a CS background that Profile 2 entirely lacks. The gap is not technical aptitude but demonstrated system-building in a revenue context. Profile 2 got a GTM Engineer title by stacking visible sales activity across multiple roles quickly; the confirmed RevOps internship will serve the same credentialing function, but only if it exits with a portfolio artifact \u2014 an automation, a pipeline model, or a tooling build \u2014 that can be pointed to. The highest-leverage moves are: (1) use the internship to ship something measurable and public-facing (even a GitHub repo or case study), and (2) accelerate Clay/Apollo/AI tooling fluency now so that by the time the internship starts, GTM systems are being built rather than learned on the job."
+}

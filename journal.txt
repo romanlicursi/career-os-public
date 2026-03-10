@@ -1,0 +1,1 @@
+2026-03-10: Built and ran Layer 1 of Career OS end-to-end — scraper pulled 49 real LinkedIn postings across 5 target titles, processor extracted signals into layer1_digest.json. First real data in the system: Salesforce (10x), Excel (8x), Tableau (5x) dominate; enterprise-stage companies are the majority of postings in this space.

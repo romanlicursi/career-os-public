@@ -1,0 +1,34 @@
+name: Layer 0 — Orientation
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '0 8 1 * *'  # Monthly: 1st of every month at 8am UTC
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install -r requirements.txt
+      - name: Run Layer 0
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          mkdir -p data/logs data/raw data/summaries
+          python3 scripts/layer0.py 2>&1 | tee data/logs/layer0-$(date +%Y-%m-%d).log
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/summaries/layer0_signals.json
+          git add data/summaries/layer0_orientation.md
+          git add "data/summaries/layer0_orientation_$(date +%Y-%m-%d).md" 2>/dev/null || true
+          git add data/logs/
+          git diff --staged --quiet || git commit -m "Layer 0 orientation $(date +%Y-%m-%d)"
+          git push
