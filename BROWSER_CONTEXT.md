@@ -51,18 +51,24 @@ Layer 2 extractions are career-move based; education adds noise without answerin
 13
 Automated Roman's profile input via Apify scraper (harvestapi/linkedin-profile-scraper)
 Fully automated, $0.004/run, captures all LinkedIn sections including projects and posts; validated March 10 2026
+14
+Automation runs on GitHub Actions, not local cron
+Free tier, no laptop dependency, secrets managed securely, workflows commit data back to repo
+15
+Raw files not committed to GitHub — ephemeral per run
+Keeps repo clean; summaries in data/summaries/ are source of truth between runs
 
 
 Section 3: Current State
 Last updated: March 10, 2026
 
 Current State:
-- Layer 3 fully live — pipeline runs clean end-to-end: Apify scrapes roman_profile.json + roman_posts.json → synthesis_memo.md written and versioned
-- First memo produced strong signal: Salesforce Trailhead gap (Admin + Reports + Flow Builder), backwards metrics on LinkedIn (fictional projects have numbers, real work doesn't), CAUHEC case study as first public proof-of-work asset
-- Profile input is fully automated via harvestapi/linkedin-profile-scraper ($0.004/run, captures experience, projects, skills, about, posts) — no manual steps
-- Run full pipeline: `python3 scripts/run_layer3_pipeline.py` | Memo only: `--skip-fetch`
+- Layer 3 fully live — automated pipeline runs clean: Apify scrapes roman_profile.json + roman_posts.json → synthesis_memo.md written and versioned; first memo produced actionable signal (Salesforce gap, backwards LinkedIn metrics, CAUHEC case study)
+- Full automation migrated from local cron to GitHub Actions — four workflows built (Layer 1 weekly, Layer 2 monthly, Layer 3 weekly, Layer 6 monthly), repo pushed, secrets added, laptop dependency eliminated
+- Email delivery not yet built — workflows log only for now; notify.py to be added as a second pass
+- Cost validated at ~$1.60/month across all layers, within $5/month target
 
 Next steps:
-- Act on memo: Salesforce Trailhead in Prague, rewrite CAUHEC/Roger bullets with real numbers, draft CAUHEC case study
-- Log memo action items in journal.txt so next Layer 3 run has ground truth on follow-through
-- Build Layer 4 (sprint card generation from synthesis_memo.md) when ready to continue
+- Trigger manual Layer 1 workflow run from GitHub Actions tab to confirm full pipeline works end-to-end in the cloud
+- Build email delivery (notify.py) and add notification steps into existing GitHub Actions workflows
+- Act on first memo: Salesforce Trailhead, rewrite CAUHEC/Roger bullets with real numbers, draft CAUHEC case study
