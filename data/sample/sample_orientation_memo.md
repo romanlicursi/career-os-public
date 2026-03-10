@@ -29,7 +29,7 @@ The gap between these two tiers is widening. The positioning question is which t
 
 ## Path Assessment
 
-| Path | Viability (1-5) | 5-Year Trajectory | AI Displacement Risk | Autonomy Ceiling | FIRE Alignment (1-5) |
+| Path | Viability (1-5) | 5-Year Trajectory | AI Displacement Risk | Autonomy Ceiling | LT Financial Alignment (1-5) |
 |---|---|---|---|---|---|
 | **1. GTM Engineer / AI-Native RevOps** | 5 | Senior GTM Engineer → Head of GTM Ops or fractional. $150-250K+ within 4 years. | Low — building the AI, not competing with it | High — fractional/consulting opens by year 3 | 5 |
 | **2. RevOps Manager (traditional track)** | 5 | RevOps Manager → Sr. Manager → Director. $90-140K range for years. | High — automatable list IS this job | Low — employee track at enterprise | 2 |

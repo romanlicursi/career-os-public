@@ -1,15 +1,16 @@
 {
   "_compressed_at": "2026-03-10T10:08:20.075593+00:00",
-  "name": "Roman Licursi",
-  "headline": "RevOps & GTM Analytics | Building data systems for B2B SaaS growth | Computer Science @ UW\u2013Madison",
+  "_note": "Personal identifiers redacted for public repo. Layer 3 loads the real version from the private repo.",
+  "name": "[User]",
+  "headline": "RevOps & GTM Analytics | Building data systems for B2B SaaS growth | Computer Science @ [University]",
   "location": "US",
-  "connections": 870,
+  "connections": "[redacted]",
   "top_skills": "SQL \u2022 Revenue Operations (RevOps) \u2022 Python (Programming Language)",
-  "about": "I help revenue teams make better decisions faster using data and automation. Most GTM teams struggle because their data is inconsistent and their forecasts are unreliable. I fix that by designing clean, automated frameworks that leaders can trust.\n\nRecent work:\n- Churn prediction dashboard: Flagged 22.8% of at-risk accounts, projecting 15% churn reduction and $131K saveable MRR\n- Lead scoring automation: 12% improvement in MQL\u2192SQL conversion by prioritizing high-value leads\n- Marketing ROI tracker: Improved ROAS from 2.8 \u2192 3.3 by identifying and cutting low-performing spend\n\nSQL, Python (APIs, automation, machine learning), Tableau, Salesforce, HubSpot, Clay for GTM data activation, and workflow automation with Zapier and Make. I pair this with a working knowledge of SaaS unit economics like CAC, LTV, churn, and payback so every system I build ties to real revenue outcomes.\n\nCurrently: CS junior at UW Madison focused on roles where I can architect data driven revenue systems at scale.\n\nPortfolio: https://github.com/romanlicursi | Email: romanlicursi@gmail.com",
+  "about": "I help revenue teams make better decisions faster using data and automation. Most GTM teams struggle because their data is inconsistent and their forecasts are unreliable. I fix that by designing clean, automated frameworks that leaders can trust.\n\nRecent work:\n- Churn prediction dashboard: Flagged 22.8% of at-risk accounts, projecting 15% churn reduction and $131K saveable MRR\n- Lead scoring automation: 12% improvement in MQL\u2192SQL conversion by prioritizing high-value leads\n- Marketing ROI tracker: Improved ROAS from 2.8 \u2192 3.3 by identifying and cutting low-performing spend\n\nSQL, Python (APIs, automation, machine learning), Tableau, Salesforce, HubSpot, Clay for GTM data activation, and workflow automation with Zapier and Make. I pair this with a working knowledge of SaaS unit economics like CAC, LTV, churn, and payback so every system I build ties to real revenue outcomes.\n\nCurrently: CS junior focused on roles where I can architect data driven revenue systems at scale.",
   "experience": [
     {
       "title": "Revenue Operations Intern",
-      "company": "Donaldson",
+      "company": "[Mid-market industrial company]",
       "start_date": "Dec 2025",
       "end_date": "Present",
       "duration": "4 mos",
@@ -17,137 +18,71 @@
     },
     {
       "title": "Growth Intern",
-      "company": "Roger (YC S24)",
+      "company": "[YC S24 AI startup]",
       "start_date": "Dec 2025",
       "end_date": "Present",
       "duration": "4 mos",
-      "description": "Running outbound growth experiments for YC-backed AI SDR platform. Building prospect lists, launching campaigns across LinkedIn and email, and tracking performance metrics. Creating monthly content (TikTok, LinkedIn video) to demonstrate product value. Participating in structured cold calling program with direct coaching from growth team."
+      "description": "Running outbound growth experiments for YC-backed AI SDR platform. Building prospect lists, launching campaigns across LinkedIn and email, and tracking performance metrics. Creating monthly content to demonstrate product value. Participating in structured cold calling program with direct coaching from growth team."
     },
     {
       "title": "Business Development & Growth Associate",
-      "company": "College and University Healthcare Education Consortium",
+      "company": "[Healthcare workforce nonprofit]",
       "start_date": "Sep 2025",
       "end_date": "Present",
       "duration": "7 mos",
-      "description": "Supporting CAUHEC\u2019s mission to expand clinical training capacity and strengthen the healthcare workforce by:\nBuilding and managing automated outbound pipelines between CRM and automated email campaigns\nSourcing and enriching qualified university and healthcare partner lead data\nBuilding automated email campaigns\nDesigning dashboards to track B2B funnel performance and conversion metrics\nCollaborating with Founder/CEO on growth strategy"
+      "description": "Supporting mission to expand clinical training capacity and strengthen the healthcare workforce by:\nBuilding and managing automated outbound pipelines between CRM and automated email campaigns\nSourcing and enriching qualified university and healthcare partner lead data\nBuilding automated email campaigns\nDesigning dashboards to track B2B funnel performance and conversion metrics\nCollaborating with Founder/CEO on growth strategy"
     },
     {
       "title": "Data Analytics Intern",
-      "company": "Community Action Partnership of Ramsey & Washington Counties",
+      "company": "[Government social services agency]",
       "start_date": "Jul 2025",
       "end_date": "Aug 2025",
       "duration": "2 mos",
-      "description": "Designed and implemented dashboards to help staff manage and engage with over 100 active community partnerships\nBuilt tools to filter by engagement tier, department, staff lead, and partnership status, with instant access to contact information\nAnalyzed historical partnership data to identify engagement gaps, department trends, and regional disparities across Ramsey and Washington counties\nPresented findings to staff to support more informed, equitable outreach and partnership management strategies"
+      "description": "Designed and implemented dashboards to help staff manage and engage with over 100 active community partnerships\nBuilt tools to filter by engagement tier, department, staff lead, and partnership status, with instant access to contact information\nAnalyzed historical partnership data to identify engagement gaps, department trends, and regional disparities\nPresented findings to staff to support more informed, equitable outreach and partnership management strategies"
     },
     {
       "title": "Website Director",
-      "company": "TEDxUWMadison",
+      "company": "[University TEDx chapter]",
       "start_date": "Oct 2024",
       "end_date": "Aug 2025",
       "duration": "11 mos",
-      "description": "Spearheaded website redesign, enhancing user experience and accessibility for TedxUWMadison's digital platform.\nConceptualized and executed innovative features to showcase TedxUWMadison's unique brand identity and mission across digital platforms.\nKept website up-to-date with important details like event dates, ticketing information, venue locations, and speaker lineups."
-    },
-    {
-      "title": "Customer Service Associate",
-      "company": "Madison Public Library - Sequoya Branch",
-      "start_date": "Oct 2024",
-      "end_date": "Jul 2025",
-      "duration": "10 mos",
-      "description": "Provided friendly, solutions-focused support to library patrons, resolving account issues and inquiries efficiently\nManaged circulation materials and improved operational workflows to enhance the user experience\nAssisted with event programming and outreach, supporting community education and engagement initiatives"
-    },
-    {
-      "title": "Dockhand",
-      "company": "Your Boat Club",
-      "start_date": "Aug 2021",
-      "end_date": "Oct 2024",
-      "duration": "3 yrs 3 mos",
-      "description": "Managed boat operations and ensured safety during challenging conditions. Delivered friendly, efficient customer service and resolved technical and logistical issues under pressure."
-    },
-    {
-      "title": "Associate",
-      "company": "Snap Fitness 24/7",
-      "start_date": "Jan 2021",
-      "end_date": "Aug 2023",
-      "duration": "2 yrs 8 mos",
-      "description": "Supported gym operations, ran social media campaigns, and built rapport with members."
+      "description": "Spearheaded website redesign, enhancing user experience and accessibility.\nConceptualized and executed innovative features to showcase brand identity and mission.\nKept website up-to-date with event details, ticketing information, venue locations, and speaker lineups."
     }
   ],
   "projects": [
     {
       "title": "E-Commerce Data Quality Pipeline",
       "duration": "Nov 2025 - Nov 2025",
-      "description": "Built an end-to-end ETL pipeline processing 50,000 e-commerce orders, identifying and resolving 7,984 data quality issues to deliver analytics-ready tables for business intelligence. Designed with cloud-native architecture for AWS production deployment.\n\n**Technical Implementation:**\n- Engineered multi-stage pipeline: ingestion \u2192 validation \u2192 cleaning \u2192 transformation \u2192 monitoring \u2192 export with comprehensive logging and idempotent stages\n- Developed automated data quality framework measuring completeness, validity, uniqueness, and consistency across all dimensions\n- Built SQL transformations using CTEs and window functions creating five analytics tables: fct_orders (47,616 rows), dim_customers (11,887), product_performance, marketing_attribution (72 source-quarter combos), and daily_metric"
+      "description": "Built an end-to-end ETL pipeline processing 50,000 e-commerce orders, identifying and resolving 7,984 data quality issues to deliver analytics-ready tables for business intelligence. Designed with cloud-native architecture for AWS production deployment.\n\nTechnical Implementation:\n- Engineered multi-stage pipeline: ingestion \u2192 validation \u2192 cleaning \u2192 transformation \u2192 monitoring \u2192 export with comprehensive logging and idempotent stages\n- Developed automated data quality framework measuring completeness, validity, uniqueness, and consistency across all dimensions\n- Built SQL transformations using CTEs and window functions creating five analytics tables: fct_orders (47,616 rows), dim_customers (11,887), product_performance, marketing_attribution (72 source-quarter combos), and daily_metrics"
     },
     {
       "title": "Lead Scoring Automation System",
       "duration": "Aug 2025 - Sep 2025",
-      "description": "Built an end-to-end lead scoring automation system that replicates enterprise CRM functionality, demonstrating production-ready Revenue Operations capabilities. The project combines rule-based scoring logic with machine learning to prioritize high-value leads and automate sales team notifications.\n\n**Technical Implementation:**\n- Developed dual scoring methodology: rule-based algorithm (weighted behavioral + firmographic attributes) and ML-powered probability model using Logistic Regression with scikit-learn\n- Built automated data pipeline processing lead attributes including engagement metrics (pages viewed, CTA clicks, email open rates), firmographic data (annual revenue, industry, company size), and behavioral signals (demo requests, lead source)\n- Engineered feature preprocessing pipel"
+      "description": "Built an end-to-end lead scoring automation system that replicates enterprise CRM functionality, demonstrating production-ready Revenue Operations capabilities. Combines rule-based scoring logic with machine learning to prioritize high-value leads and automate sales team notifications.\n\nTechnical Implementation:\n- Developed dual scoring methodology: rule-based algorithm (weighted behavioral + firmographic attributes) and ML-powered probability model using Logistic Regression with scikit-learn\n- Built automated data pipeline processing lead attributes including engagement metrics (pages viewed, CTA clicks, email open rates), firmographic data (annual revenue, industry, company size), and behavioral signals (demo requests, lead source)"
     },
     {
       "title": "NimbusHR | RevOps Dashboard, Funnel Analytics & Churn Model (SQL + Python + Tableau)",
       "duration": "Jul 2025 - Aug 2025",
-      "description": "\ud83d\udcca Built a full-stack RevOps analytics dashboard and churn prediction engine for a fictional B2B SaaS company using SQL, Python (logistic regression), and Tableau.\n\n\ud83d\ude80 Business Goals Simulated:\n\nFunnel drop-off visibility (Lead \u2192 MQL \u2192 SQL \u2192 Customer)\nCAC/payback period by marketing channel\nChurn risk scoring to prioritize retention campaigns\n\n\ud83d\udd0d Key Results:\n\nIdentified 15% of customers with \u226560% churn probability\nAUC: 0.793 | Accuracy: 0.794\nHighlighted inefficient spend (e.g. LinkedIn = high CAC, long payback)"
+      "description": "Built a full-stack RevOps analytics dashboard and churn prediction engine for a fictional B2B SaaS company using SQL, Python (logistic regression), and Tableau.\n\nBusiness Goals Simulated:\nFunnel drop-off visibility (Lead \u2192 MQL \u2192 SQL \u2192 Customer)\nCAC/payback period by marketing channel\nChurn risk scoring to prioritize retention campaigns\n\nKey Results:\nIdentified 15% of customers with \u226560% churn probability\nAUC: 0.793 | Accuracy: 0.794\nHighlighted inefficient spend (e.g. LinkedIn = high CAC, long payback)"
     }
   ],
   "certifications": [
-    {
-      "name": "",
-      "authority": ""
-    },
-    {
-      "name": "",
-      "authority": ""
-    },
-    {
-      "name": "",
-      "authority": ""
-    },
-    {
-      "name": "",
-      "authority": ""
-    }
+    {"name": "", "authority": ""},
+    {"name": "", "authority": ""},
+    {"name": "", "authority": ""},
+    {"name": "", "authority": ""}
   ],
   "skills": [
-    "Zapier",
-    "PL/SQL",
-    "Python",
-    "R (Programming Language)",
-    "Tableau",
-    "Microsoft Excel",
-    "C (Programming Language)",
-    "Python (Programming Language)",
-    "Plotly",
-    "Java",
-    "SQL",
-    "Claude Code",
-    "Apollo",
-    "OpenClaw",
-    "Customer Relationship Management (CRM)",
-    "Data Enrichment ",
-    "Email Campaigning",
-    "Data Sourcing",
-    "B2B Saas",
-    "ETL Pipeline Development",
-    "Data Quality Management",
-    "Data Engineering",
-    "DuckDB",
-    "Business Intelligence (BI)",
-    "Data Warehouse Design",
-    "Data Validation",
-    "Extract, Transform, Load (ETL)",
-    "Data Quality Assurance",
-    "Predictive Analytics",
-    "Clay",
-    "Business Analytics",
-    "Predictive Modeling",
-    "Logistic Regression",
-    "Go-to-Market Strategy",
-    "Data Analysis",
-    "Data Visualization",
-    "Google Sheets",
-    "Streamlit",
-    "Web Development",
-    "Machine Learning"
+    "Zapier", "PL/SQL", "Python", "R (Programming Language)", "Tableau",
+    "Microsoft Excel", "C (Programming Language)", "Python (Programming Language)",
+    "Plotly", "Java", "SQL", "Claude Code", "Apollo", "Customer Relationship Management (CRM)",
+    "Data Enrichment", "Email Campaigning", "Data Sourcing", "B2B SaaS",
+    "ETL Pipeline Development", "Data Quality Management", "Data Engineering", "DuckDB",
+    "Business Intelligence (BI)", "Data Warehouse Design", "Data Validation",
+    "Extract, Transform, Load (ETL)", "Data Quality Assurance", "Predictive Analytics",
+    "Clay", "Business Analytics", "Predictive Modeling", "Logistic Regression",
+    "Go-to-Market Strategy", "Data Analysis", "Data Visualization", "Google Sheets",
+    "Streamlit", "Web Development", "Machine Learning"
   ],
   "recent_posts": []
 }
