@@ -39,7 +39,27 @@ jobs:
           git add data/summaries/synthesis_memo.md \
                   data/summaries/roman_profile_summary.json \
                   data/logs/
-          # Glob the versioned archive file — git add handles non-existent globs gracefully
           git add "data/summaries/synthesis_memo_$(date +%Y-%m-%d).md" 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Layer 3 synthesis $(date +%Y-%m-%d)"
           git push
+
+      - name: Read synthesis memo
+        id: memo
+        run: |
+          {
+            echo 'MEMO_CONTENT<<EOF'
+            cat data/summaries/synthesis_memo.md
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Send synthesis memo by email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: romanlicursi@gmail.com
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: "Career OS — Weekly Synthesis Memo $(date +%Y-%m-%d)"
+          to: romanlicursi@gmail.com
+          from: Career OS <romanlicursi@gmail.com>
+          body: ${{ steps.memo.outputs.MEMO_CONTENT }}
