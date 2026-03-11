@@ -1,0 +1,19 @@
+{
+  "_comments": {
+    "keywords": "Job title/description must match at least one. Case-insensitive.",
+    "priority_companies": "Always alert regardless of keyword match.",
+    "blocklist_companies": "Never alert. Partial name match, case-insensitive.",
+    "remote_only": "If true, skip any job without a remote flag.",
+    "max_hours_old": "Skip jobs older than this many hours.",
+    "results_per_source": "Max results fetched per source per run (keep ≤25)."
+  },
+  "keywords": [
+    "revenue operations", "revops", "go-to-market", "gtm",
+    "business development", "growth", "sales operations", "marketing operations"
+  ],
+  "priority_companies": [],
+  "blocklist_companies": ["staffing", "solutions", "consulting", "kforce", "robert half"],
+  "remote_only": true,
+  "max_hours_old": 48,
+  "results_per_source": 25
+}
