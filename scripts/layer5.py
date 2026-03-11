@@ -51,7 +51,7 @@ load_dotenv()
 # ── Configuration ─────────────────────────────────────────────────────────────
 
 ANTHROPIC_API_KEY  = os.environ.get("ANTHROPIC_API_KEY", "")
-APIFY_TOKEN        = os.environ.get("APIFY_API_TOKEN", "REDACTED_APIFY_TOKEN")
+APIFY_TOKEN        = os.environ.get("APIFY_API_TOKEN", "")
 GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "")
 GMAIL_USER         = os.environ.get("GMAIL_USER", "")
 

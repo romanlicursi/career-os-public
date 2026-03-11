@@ -32,7 +32,7 @@ from apify_client import ApifyClient
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 
-APIFY_TOKEN = os.environ.get("APIFY_API_TOKEN", "REDACTED_APIFY_TOKEN")
+APIFY_TOKEN = os.environ.get("APIFY_API_TOKEN", "")
 ACTOR       = "apimaestro/linkedin-jobs-scraper-api"
 
 JOB_TITLES = [

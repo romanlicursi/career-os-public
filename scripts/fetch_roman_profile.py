@@ -37,7 +37,7 @@ from apify_client import ApifyClient
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 
-APIFY_TOKEN  = os.environ.get("APIFY_API_TOKEN", "REDACTED_APIFY_TOKEN")
+APIFY_TOKEN  = os.environ.get("APIFY_API_TOKEN", "")
 ROMAN_URL    = "https://www.linkedin.com/in/roman-licursi-3aab2a160/"
 
 ACTOR_PROFILE = "harvestapi/linkedin-profile-scraper"
