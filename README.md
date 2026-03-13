@@ -177,10 +177,6 @@ career-os/
 
 ## Why Build This
 
-The meta-point: building this system is itself the portfolio piece.
-
-A partially-built, well-documented Career OS demonstrates more about how someone thinks than any resume bullet. It shows: systems thinking applied to a personal problem, multi-model AI pipeline design, automation infrastructure, and the judgment to know what to automate and what to keep human.
-
 The specific use case is career development. The generalizable skill is: identify a repeating problem, build a system that solves it continuously, instrument it so it gets smarter over time.
 
 ---
