@@ -2,7 +2,7 @@
 
 A six-layer intelligence and action system for career development — built entirely in Claude Code, automated via GitHub Actions, and filtered through a personal Decision Constitution.
 
-This is not a weekend project. It scrapes real job postings weekly, maps real career trajectories, generates a weekly sprint card, and produces targeted outreach drafts — all synthesized by a multi-model AI pipeline and committed automatically to this repo.
+Scrapes real job postings weekly, maps real career trajectories, generates a weekly sprint card, and produces targeted outreach drafts — all synthesized by a multi-model AI pipeline and committed automatically to this repo.
 
 ---
 
