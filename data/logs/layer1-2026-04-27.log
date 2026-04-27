@@ -1,0 +1,17 @@
+
+── Scraping LinkedIn  (10/title × 5 titles = 50) ──
+  'Revenue Operations Analyst'  (requesting 10)
+  ERROR 'Revenue Operations Analyst': Authentication token was not provided
+  'GTM Operations'  (requesting 10)
+  ERROR 'GTM Operations': Authentication token was not provided
+  'Sales Operations Analyst'  (requesting 10)
+  ERROR 'Sales Operations Analyst': Authentication token was not provided
+  'Growth Operations'  (requesting 10)
+  ERROR 'Growth Operations': Authentication token was not provided
+  'Business Operations Analyst'  (requesting 10)
+  ERROR 'Business Operations Analyst': Authentication token was not provided
+
+✓  0 unique postings (0 fetched) → /home/runner/work/career-os-public/career-os-public/data/raw/2026-04-27_scrape.json
+   Next: python3 scripts/process_layer1.py
+ERROR: ANTHROPIC_API_KEY environment variable is not set.
+       export ANTHROPIC_API_KEY=sk-ant-...
