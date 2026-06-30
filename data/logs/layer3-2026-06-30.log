@@ -1,0 +1,23 @@
+══════════════════════════════════════════
+  Career OS — Layer 3 Pipeline
+══════════════════════════════════════════
+
+[Step 1/2] Fetching Roman's LinkedIn profile...
+
+── Fetching Roman's LinkedIn profile  (2026-06-30T10:53:57.231279+00:00) ──
+  [profile] Starting actor: harvestapi/linkedin-profile-scraper
+Traceback (most recent call last):
+  File "/home/runner/work/career-os-public/career-os-public/scripts/run_layer3_pipeline.py", line 55, in <module>
+    main(skip_fetch=args.skip_fetch, run_date=args.date)
+  File "/home/runner/work/career-os-public/career-os-public/scripts/run_layer3_pipeline.py", line 37, in main
+    fetch_roman_profile.main()
+  File "/home/runner/work/career-os-public/career-os-public/scripts/fetch_roman_profile.py", line 195, in main
+    profile_items, profile_meta = run_actor(
+                                  ^^^^^^^^^^
+  File "/home/runner/work/career-os-public/career-os-public/scripts/fetch_roman_profile.py", line 59, in run_actor
+    run = client.actor(actor).call(run_input=run_input, timeout_secs=timeout)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/apify_client/_logging.py", line 142, in wrapper
+    return fun(resource_client, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ActorClient.call() got an unexpected keyword argument 'timeout_secs'
