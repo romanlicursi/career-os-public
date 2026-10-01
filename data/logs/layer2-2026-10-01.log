@@ -1,0 +1,16 @@
+
+── Layer 2 Scrape  (4 queries × 8 = ~32 profiles) ──
+   Actor: harvestapi/linkedin-profile-search
+  'Strategy and Operations'  (requesting 8)
+  ERROR on 'Strategy and Operations': ActorClient.call() got an unexpected keyword argument 'timeout_secs'
+  'Growth Operations'  (requesting 8)
+  ERROR on 'Growth Operations': ActorClient.call() got an unexpected keyword argument 'timeout_secs'
+  'Revenue Operations'  (requesting 8)
+  ERROR on 'Revenue Operations': ActorClient.call() got an unexpected keyword argument 'timeout_secs'
+  'GTM Engineer'  (requesting 8)
+  ERROR on 'GTM Engineer': ActorClient.call() got an unexpected keyword argument 'timeout_secs'
+
+  Kept 0 profiles, skipped 0 (no career data or large-enterprise filter)
+No profiles to save. Check actor output or filter settings.
+ERROR: ANTHROPIC_API_KEY environment variable is not set.
+       export ANTHROPIC_API_KEY=sk-ant-...
